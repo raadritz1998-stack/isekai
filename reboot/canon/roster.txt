@@ -26,7 +26,7 @@ Ivet    # born 1184, age 33 · Corin's wife. Told him he was a big man in a smal
 Corin   # born 1182, age 35 · Vale armsman turned field-master. Runs the unglamorous operations.
 Jory    # born 1179, age 38 · Vale guard captain. Loyal to the baron, slowly to something else.
 Maeve   # born 1177, age 40 · the miller's widow; intelligence. Reads ledgers better than anyone alive.
-Aldous  # born 1167, age 50 · surgeon-apothecary at Vale — dies 1217. The first man Casian cannot save fast enough. The network is founded the day after.
+Aldous  # born 1167, age 50 · surgeon-apothecary at Vale — dies 1217. The first man Casian cannot save fast enough. Wounded in the lane at Ashgrove in October, works all night on other people, dies at dawn.
 Watt    # born 1166, age 51 · innkeeper at Ashgrove; the man with the tally. Kept a tally of carts for eleven years because a man who sells drink to carters keeps a tally of carters. First man hired for the Ashgrove road.
 Ansel   # born 1157, age 60 · the fence at Harrowmere. Knows every debt on the eastern road.
 
@@ -54,6 +54,7 @@ Halden  # born 1177, age 40 · Ilse's lieutenant. Loyal, unsentimental. Survives
 
 # — The Court — volume 4 —
 Lucan  # born 1191, age 26 · Duke of Redmere. Elegant, competitive. Thinks every house has a price. Not erased. Lives.
+Varyn  # born 1165, age 52 · Royal Duke of Ostmark; Seraine's father. Has never ridden east. Being told he should.
 
 # — The Crown — volume 4 —
 Orlan    # born 1171, age 46 · Royal Marshal. Blunt soldier. Thinks the eastern Compact must be measured.

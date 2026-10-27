@@ -63,6 +63,7 @@ for the whole volume, and the next volume's table entry is the age they turn.
 | Halden | 1177 | 40 | 41 | 42 | 44 | 45 |
 | **The Court — volume 4** | |  |  |  |  |  |
 | Lucan | 1191 | 26 | 27 | 28 | 30 | 31 |
+| Varyn | 1165 | 52 | 53 | 54 | 56 | 57 |
 | **The Crown — volume 4** | |  |  |  |  |  |
 | Orlan | 1171 | 46 | 47 | 48 | 50 | 51 |
 | Caedmon | 1163 | 54 | 55 | 56 | 58 | 59 |

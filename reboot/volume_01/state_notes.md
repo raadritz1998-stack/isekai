@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 16 / 40 |
-| Next | ch. 17 — *The Old Complaint* (Seraine arrives) |
+| Drafted | 20 / 40 |
+| Next | ch. 21 — *The Council in Osric's Hall* (THE COUNCIL BEAT) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -84,6 +84,15 @@
   - Irreversible: Edric knows and has decided to let it continue. Maren knows and has decided to ask only the questions she can live with.
 - **ch_016 *What Maeve Was Reading* (Maeve).** Three nights with the mill book. The levy: nine marks a quarter, forty-one men, two years, 738 marks, going out as "sundries" and over the cut. Thirty of the thirty-two she can name have a grudge against the Vales. It is not a levy, it is a payroll. She gets a paper out of Widow Rill's son, countersigned by Rennick and signed by Osric's steward Weyl. Her warning at the door: whatever he builds, the thirty men with grudges are in it and nobody has asked them.
   - Irreversible: **there is now written evidence that could hang a baron.** Maeve has made herself a person who can be killed for it.
+- **ch_017 *The Old Complaint* (Seraine).** Seraine Varyn, 19, arrives after six days in the county records at Harrowmere. She is good at noticing when a man tells her a thing that is true and is not the thing that matters. Three findings: the county has been getting *paid*, not rich; eleven recognisances lodged by one clerk for an unnamed patron; and the levy is not a levy but a wage. Edric is honest and ineffective and knows it. Calla gives her the barn at Fenwick. She writes to her father and tells him not to send anyone yet. Her error: she reads the Vales as bystanders who noticed, and does not see that the fourth son is the thing she is looking for.
+  - Irreversible: **the crown now has a report that names Thornwall.** The clock on Osric is running.
+- **ch_018 *A Fourth Son's Errand* (Casian).** Two days in Thornwall being harmless by choice, with three rehearsed versions of his errand. Finds Rennick's lean-to bolted from the road and a boy from the north living in the loft since September — Osric's people are taking delivery of people, which means Lowmere was not the whole of it. Sees the queue outside the factor's house: Osric is buying the town with the levy. Hears Tolan in the Bell: *"the man who pays me has never once asked me to do a thing he wouldn't have been able to say in his own hall, and that has been gone since September."* Ends by making a fool of himself at Rennick's own counter, and Argius tells him plainly that this was pleasure, not mask.
+  - Irreversible: **Casian now knows people are being traded, not just raided.**
+- **ch_019 *Nothing Happened at Ashgrove* (Casian).** Nine men come to burn the Vale granary. Casian could take them on the road at four in the morning and does not, because he wants a witness; he puts them in a lane. Eight die, one goes home. **Aldous is knifed in the lane in the ninety seconds before Casian acts** — he went out because a thing was happening beside his house. He works all night on other people, asks after a boy's arm, tells Nessa to leave his wife asleep till light, and dies at dawn. Nessa takes his tools. Corin's rule: *don't make a lesson of a thing you can stop.* Maren asks him for the truth and gets it.
+  - **This is the volume's cost. It is not a failure of power; it is a failure of attention and of wanting a story.**
+- **ch_020 *I Was Not Looking* (Casian).** The funeral; four hundred people, three hundred of whom are not Vale's. The meeting where the network's true purpose is said aloud for the first time: *a thing that has nowhere in this county I'm not* — not to kill anyone, but so that a thing starting in the east is known before it is near a house. Ansel says it back. Nessa's condition: keep the surgery open, train a second person, and account for every penny in a book she can see. Nessa's insight that changes the meeting: they need a door that isn't the Vale. Maeve: *"there's houses in this county that every man will walk into, and one of them is a mill."* Also: money is nearly gone, and Casian proposes a real, dull, named carrying business as cover and wage.
+  - Dependency count: **18**.
+  - Irreversible: **the network has a stated purpose, a nickname-proof dullness planned, a new door, and a stated end-state.** Edric's warning, which is the series thesis in four sentences: *"the day is coming when four hundred people in these marches can't do a thing without you, and on that day you will be the most dangerous thing in the east and it will not be because of what you can do... you'll be dangerous because you'll be needed, and there's no wall in the world for that."*
 
 ## Carry-out checklist
 

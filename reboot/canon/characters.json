@@ -160,7 +160,7 @@
       "birth": 1167,
       "group": "hollow",
       "role": "surgeon-apothecary at Vale",
-      "note": "The first man Casian cannot save fast enough. The network is founded the day after.",
+      "note": "The first man Casian cannot save fast enough. Wounded in the lane at Ashgrove in October, works all night on other people, dies at dawn.",
       "dies": 1217
     },
     {
@@ -344,6 +344,20 @@
       "group": "tenants",
       "role": "headman of Lowmere",
       "note": "The village Hask takes in ch.13. Held responsible for grain he no longer has."
+    },
+    {
+      "name": "Nessa",
+      "birth": 1196,
+      "group": "tenants",
+      "role": "Aldous's apprentice",
+      "note": "Twenty-one. Keeps the surgery after him."
+    },
+    {
+      "name": "Varyn",
+      "birth": 1165,
+      "group": "v4_foe",
+      "role": "Royal Duke of Ostmark; Seraine's father",
+      "note": "Has never ridden east. Being told he should."
     }
   ]
 }
