@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 32 / 40 |
-| Next | ch. 33 — *The Boy at the Gate* (Casian–Hask) |
+| Drafted | 36 / 40 |
+| Next | ch. 37 — *A Dance of Facts* (Seraine–Casian) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -41,7 +41,7 @@
 | ch. 29 | 28 | + Vesna, who is now a person who gives herself orders |
 | ch. 30 | 30 | + Watt and Hollis Wray |
 | ch. 32 | 30 | no change — thirty-one men desert Hask and none of them are his |
-| ch. 35 | ~36 | + Osric's people, as they come over one at a time |
+| ch. 35 | 34 | + Wex, Orlan, and the four hundred and twelve who are no longer Osric's |
 | ch. 39 | **41** | the list |
 
 ## Continuity log
@@ -139,6 +139,31 @@
 - **Watt** (inn, Ashgrove), **Ivet** (Corin's wife), **Maeve Corran**, **Kael** (second rider).
 - **Tam Sillow**, **Ayleth**, **the Dunstans**, **the Coate sisters** — Hanging Rake families.
 - **Berrin**, **Skeat**, **Nib**, **Orm** — Hask's side. **Orm** the Ashgrove woodward (ch. 27) and **Cull Sillow** (ch. 29) are different men; the near-collision was fixed, do not reuse either name.
+
+
+- **ch_033 *The Boy at the Gate* (Casian).** The tally-room. Hask works out within ten minutes that the boy from the kitchen is the thing he has been hunting and still cannot make him into an enemy. Casian asks for one thing — **that Hask go home tonight and answer at Harven** — and offers him a way out that would actually have worked. Hask's refusal is the volume's real hinge, and it is not stupid: *"You're not going to be anything, you know… a man of your sort does not last past his patron."* He tells Casian where he will camp (the long field at Rye, for the water) because he has decided the boy is harmless. Casian's warning is stated plainly and taken for a boy's politeness: *"it'll come a piece at a time, and it'll take about eleven days, and at the end of it there'll be a horse standing somewhere with nobody with it."*
+  - **Tolan confronts him in the yard and gets nothing but the truth:** *"if he goes home tonight he lives… and eleven of them will not, and it will be my fault, and I'll not be able to write it in the book."* Tolan says he will go on writing it down. Casian: *"one of us is going to be wrong about how this ends, and I'd rather it was me."*
+  - Edric, on being told the boy gave Hask a way out and was not heard: *"I'd have done the same at your age and I'd have got the same answer."* Ends on the goose and "...I'll be there" — the last fully ordinary line before the volume's kill.
+- **ch_034 *In Stages* (Hask).** Eleven days in the long field at Rye, structured by day. Ninety-one levy men go home; Thornwall's letters turn into a clerk's letter; Berrin leaves with eleven men on the seventh; the Harrowmere corn contract is already sold to Corran and Son (bought in February, innocently, by a factor who did not know); Ferrin goes to Harven with the deed and writes back four lines resigning; **three horses go, with halters unbuckled and laid straight** — the ch. 27 signature, and Hask recognises it. Weyl leaves to his face. Only **nine men answer the summons of four hundred**, and the last letter is from a woman in a village he roofed a chapel for: *"if that is what the Vale does to two hundred men, then I would rather be at the mill than in the field."*
+  - **The tent.** Casian comes in alone on the eleventh night and sits by the fire. The whole mechanism is stated and it is ordinary: *"I've never once done a thing to a man that he didn't do to himself when he'd had a fortnight of being frightened on my account."* Casian's accusation is the one that lands — **Hask could have taken the county in October and was too careful.** Ends: flap tied from the inside, lamp still burning, two cups, one full, no man. A horse found three days later at the crossing below the Veyr, **saddle unbuckled and girthed folded**, nobody with it.
+  - **Lock respected:** Casian neither strains nor threatens; he answers every question honestly and is, in the tent, almost kind. **Hask's death is an absence, not a killing** — and the volume will let the county argue about it forever.
+- **ch_035 *Thornwall Falls Quietly* (Osric).** April. The Count's clerk Orlan arrives with Seraine's thirty-one-page report, which accuses nobody and simply puts 412 households on one side of a page and the sum that should be in a strongbox on the other. **Rennick turns on Osric first** and does it well. **Wex**, a copying clerk of twenty-three paid eleven marks a year, recognises a forged seal and a forged hand because it is his whole trade, burns his copy, is sick twice, and goes to the Count's man — *"it'll be a thing a baron can't take off you."* Nobody will ever put his name on a stone.
+  - **Casian comes to Thornwall on the 19th and tells Osric the entire truth** — the eleven out of the barn, Bready's, the nineteen off the road (alive, at work, eight have written home), Hask's camp — knowing it cannot be used, because a baron caught with 400 marks under his floor saying "a gardener of sixteen did it" will be written in the margin as *unwell*. **"To be left alone. You gave me a coin for it. It's still the answer."**
+  - Osric's removal is quiet: stripped, lands taken, a house and a pension near his wife's people. Rennick's parting line — *"a curse can't be reasoned with and a boy can"* — is the seed of ch. 37 and the volume's next danger.
+- **ch_036 *The Warden's Report* (Selwyn).** Selwyn of the Ash, 63, no authority but a pen, rides the marches in late April and May. **Eleven crossings, not four; seven in repair; the newest two or three years old and the work of a trained mason.** Watt genuinely believes there are four gates. He takes testimony from Orm, Berrin, the Ord woman, Vesna, and Tolan, and it is the best book of testimony of his life. In the garden at Vale he asks the only question that matters — *"are you frightened of anything?"* — and gets *"no,"* and then the boy's real fear: **being believed and being wrong.**
+  - He writes forty pages, gets every fact right to the day, and **writes a wrong conclusion on purpose**: an observance older than the Ash has woken. His reasoning is not cowardice and he says so out loud: a heresy report gets a village burned; a curse report gets filed. *"Nobody burns a village over a curse."*
+  - Tolan signs as to the facts only: *"The opinion is the Warden's… who has written everything down and does not know what it was either."*
+  - **This is the document that will define the Hollow in volume 2.** It is in a box, with a wrong answer at the bottom of it.
+
+## Open threads after ch. 36
+
+- The **eleven gates** and who mends them — deliberately still unexplained, now *documented* by a scholar.
+- The **moved Fenwick stone**, two or three seasons before the story.
+- **Hask's body**: never found. The county has six stories; all of them keep the lamp.
+- **Seraine's June**: she is at Harven for the Count's hearing, her father has read her letter, and a **Royal Marshal** has been riding in the county since March.
+- **Tolan** owns three books and a copy of a report with a wrong conclusion, and is the only man who can contradict it.
+- **Rennick** is in Harven giving evidence and believes a boy can be reasoned with.
+- Casian still owes Vesna the promise from ch. 29: **say aloud what you are for, where people can hear it** — ch. 38.
 
 ## Carry-out checklist
 
