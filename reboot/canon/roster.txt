@@ -22,10 +22,12 @@ Argius  # ageless · damaged interface fragment. Not born. Ageless. The only one
 Vesna   # born 1198, age 19 · uplander, 19 in Vol 1; field partner. Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane.
 Kael    # born 1195, age 22 · upland scout lieutenant
 Calla   # born 1187, age 30 · Baroness of Fenwick, widow. Competent. Watching the Vale barony change.
+Ivet    # born 1184, age 33 · Corin's wife. Told him he was a big man in a small place and to decide what to do about it before he was fifty.
 Corin   # born 1182, age 35 · Vale armsman turned field-master. Runs the unglamorous operations.
 Jory    # born 1179, age 38 · Vale guard captain. Loyal to the baron, slowly to something else.
 Maeve   # born 1177, age 40 · the miller's widow; intelligence. Reads ledgers better than anyone alive.
 Aldous  # born 1167, age 50 · surgeon-apothecary at Vale — dies 1217. The first man Casian cannot save fast enough. The network is founded the day after.
+Watt    # born 1166, age 51 · innkeeper at Ashgrove; the man with the tally. Kept a tally of carts for eleven years because a man who sells drink to carters keeps a tally of carters. First man hired for the Ashgrove road.
 Ansel   # born 1157, age 60 · the fence at Harrowmere. Knows every debt on the eastern road.
 
 # — Romance —

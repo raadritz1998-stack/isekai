@@ -316,6 +316,34 @@
       "role": "Mirra's son",
       "note": "Nineteen. Was going to be married at harvest. Killed ch.5.",
       "dies": 1217
+    },
+    {
+      "name": "Watt",
+      "birth": 1166,
+      "group": "hollow",
+      "role": "innkeeper at Ashgrove; the man with the tally",
+      "note": "Kept a tally of carts for eleven years because a man who sells drink to carters keeps a tally of carters. First man hired for the Ashgrove road."
+    },
+    {
+      "name": "Ivet",
+      "birth": 1184,
+      "group": "hollow",
+      "role": "Corin's wife",
+      "note": "Told him he was a big man in a small place and to decide what to do about it before he was fifty."
+    },
+    {
+      "name": "Sennet",
+      "birth": 1199,
+      "group": "tenants",
+      "role": "Jon's intended; Ashgrove",
+      "note": "Was to be married at harvest. Survives. Do not forget her."
+    },
+    {
+      "name": "Ferrin",
+      "birth": 1187,
+      "group": "tenants",
+      "role": "headman of Lowmere",
+      "note": "The village Hask takes in ch.13. Held responsible for grain he no longer has."
     }
   ]
 }

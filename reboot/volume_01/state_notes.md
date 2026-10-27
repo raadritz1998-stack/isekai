@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 12 / 40 |
-| Next | ch. 13 — *Teeth* (Hask takes eleven captives) |
+| Drafted | 16 / 40 |
+| Next | ch. 17 — *The Old Complaint* (Seraine arrives) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -75,6 +75,15 @@
 - **ch_012 *The Shape of It* (Casian).** The old dairy. Five people around a map for two hours. Maeve, Corin, Vesna, Ansel and Casian. Money argument: two riders cost twenty marks a quarter, Maeve lends nine, Ansel four, and Casian refuses any more lending because *the day it costs me more than it costs you is the day you're entitled to a vote.* Ansel's point that wins the evening: the danger is not the men coming out of the hills, it is the forty men already in the county who owe somebody outside it. Casian says the thing out loud once — that he has brought a map, a purse and a bad idea, and everything else was built by them. Then: **Hask gets one move**, so every concealed friend has to come into the open.
   - Dependency count: **14**.
   - Irreversible: the thing has a shape and five people know it has a shape. Elna reports a grey-coated man who counted eleven at table in the spring. Edric says he will not ask, and that he will know.
+- **ch_013 *Teeth* (Hask).** Hask's own chapter. The arithmetic of a hundred and six men and eighty horses and no bread. Three options, two of them bad. He will not be at Lowmere because he wants to be able to say truthfully that he was not there: *"I'll not be at Lowmere because I want to be able to say, truthfully, in front of a Warden, that I was not at Lowmere."* Tolan asks for twenty men on the barn; he gets four. Eleven taken (Ferrin the headman, a boy of fifteen, a girl of nine, seven others), two barns burned, forty minutes. Hask rides up to the barn alone on the Sunday and looks in through the door and cannot say why.
+  - Irreversible: **eleven people are in a barn and Hask has committed.** Tolan has asked for what he wanted in writing.
+- **ch_014 *The Price of Patience* (Corin).** Vale's paralysis: five letters, one burned, one to the Bishop that cost Edric something. Gareth's fury — *"If it can't be used, what's it for?"* Vesna confronts Corin in the yard. Corin admits he has decided to follow a thing that knows rather than be correct and slow. Casian tells Corin plainly that he is not going in until Wednesday, and why: eleven people are the price of getting every concealed friend into the light. Corin: *"if those eleven come home, I'll follow you into whatever's after, and if they don't, I'll be a man who sat in a guardroom and let a boy of sixteen explain arithmetic to me."*
+  - Irreversible: **Corin has chosen, and knows what he chose.**
+- **ch_015 *Eleven Out of the Dark* (Vesna).** The extraction. Four men at the fire and four inside; no sound at all; they are simply not there. Vesna walks the eleven out at the pace of a nine-year-old. Ferrin's POV inside the barn: he had rehearsed what he would do when they came to move him, and did not need to do any of it. Corin and Watt lay out four men with cloaks over their faces and Watt asks the question. Corin reports to Edric and refuses to say how; Edric says *"It was my son"* and chooses not to ask. Maren asks only whether the girl was warm and whether it was quick.
+  - **Dependency count: 16** (5 + eleven rescued).
+  - Irreversible: Edric knows and has decided to let it continue. Maren knows and has decided to ask only the questions she can live with.
+- **ch_016 *What Maeve Was Reading* (Maeve).** Three nights with the mill book. The levy: nine marks a quarter, forty-one men, two years, 738 marks, going out as "sundries" and over the cut. Thirty of the thirty-two she can name have a grudge against the Vales. It is not a levy, it is a payroll. She gets a paper out of Widow Rill's son, countersigned by Rennick and signed by Osric's steward Weyl. Her warning at the door: whatever he builds, the thirty men with grudges are in it and nobody has asked them.
+  - Irreversible: **there is now written evidence that could hang a baron.** Maeve has made herself a person who can be killed for it.
 
 ## Carry-out checklist
 

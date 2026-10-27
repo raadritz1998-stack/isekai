@@ -37,10 +37,12 @@ for the whole volume, and the next volume's table entry is the age they turn.
 | Vesna | 1198 | 19 | 20 | 21 | 23 | 24 |
 | Kael | 1195 | 22 | 23 | 24 | 26 | 27 |
 | Calla | 1187 | 30 | 31 | 32 | 34 | 35 |
+| Ivet | 1184 | 33 | 34 | 35 | 37 | 38 |
 | Corin | 1182 | 35 | 36 | 37 | 39 | 40 |
 | Jory | 1179 | 38 | 39 | 40 | 42 | 43 |
 | Maeve | 1177 | 40 | 41 | 42 | 44 | 45 |
 | Aldous | 1167 | 50 | † | † | † | † |
+| Watt | 1166 | 51 | 52 | 53 | 55 | 56 |
 | Ansel | 1157 | 60 | 61 | 62 | 64 | 65 |
 | **Romance** | |  |  |  |  |  |
 | Seraine | 1198 | 19 | 20 | 21 | 23 | 24 |
