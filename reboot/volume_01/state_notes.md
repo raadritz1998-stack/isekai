@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 4 / 40 |
-| Next | ch. 5 — *Ash on the Road* |
+| Drafted | 8 / 40 |
+| Next | ch. 9 — *What Osric Wants* |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -56,6 +56,15 @@
   - **Dependency count: 1 (Maeve).**
   - Irreversible: he has spent most of his capital and has a creditor's claim on a miller, which is the first thing he owns that can be taken from him.
   - Seeded: Osric's steward, the eleven shops, Rennick, Brennan's loan (Brennan will want to know eventually).
+- **ch_005 *Ash on the Road* (Family).** Mirra Cott (50) and Jon (19) killed at the Ashgrove holding. Tolan leads, counts the dead himself, and now carries a number that stands at thirty-one since he started counting six years ago. Edric: law is slow and it is what we have. Maren privately tells Casian she has known for twenty years that the letters are worth nothing: *"do it so that I am never sat in a kitchen being told about it by a man with a hat in his hands."* Casian identifies the fifth road — a drove over the Common that carries goods, not men.
+  - Irreversible: **Mirra and Jon are dead.** Casian's founding reason is now on the page. Tolan is a named, thinking, reluctant antagonist.
+- **ch_006 *The Easy Brother* (Casian).** The Harrowmere fair. Wool now goes east, over the cut, up into the hills. Hask is "polite" and remembers his stable boys' names — Casian dislikes that he sees himself in it. Meets Rennick, who is cheerful and unafraid and warns him off lightly. Confirms the drove road as a fifth route. Writes it down: *anything I know about, I can do — the whole difficulty is the knowing.*
+  - Irreversible: Rennick has now seen his face and been pleasant to him.
+- **ch_007 *The Fence at Harrowmere* (Casian).** Ansel Trask, 60, the fence of the eastern road, whose paper has been quietly taken from him over two years — he has become a clerk and no one has noticed. Casian tells him so. Eleven names, one of them Osric four years old, one Rennick. Ansel's condition: the truth about what he was. Casian's realisation afterwards: *he let me win.*
+  - **Dependency count: 3 (Maeve, Ansel, and a promise to a miller).**
+  - Irreversible: eleven names exist in Casian's hand only, and Ansel has burned his own deniability.
+- **ch_008 *The Man Who Waits* (Corin).** Corin Ahl, 35 years an armsman, given the first task in his life that uses the whole of him: a wagon down the Ashgrove road as bait, reported to the baron rather than to Casian. Finds a cold fire square on the drove — nine men, ten nights, sited properly. Concludes the enemy has a soldier working for a man who isn't one. Jory covers for him. Edric's line: *"Is he right?"*
+  - Irreversible: **the Hollow now has a second working part and its first real risk.** Corin has written a private note asking why a boy of sixteen can see what he cannot.
 
 ## Carry-out checklist
 

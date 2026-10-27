@@ -300,6 +300,22 @@
       "group": "v1_foe",
       "role": "Hask's third captain",
       "note": "The only man in Osric's hall who understands what was in the room. Not believed. The one who survives."
+    },
+    {
+      "name": "Mirra",
+      "birth": 1167,
+      "group": "tenants",
+      "role": "Vale tenant, Ashgrove holding",
+      "note": "Washed for the Vale kitchen for thirty years. Taught Elna to whistle. Killed ch.5.",
+      "dies": 1217
+    },
+    {
+      "name": "Jon",
+      "birth": 1198,
+      "group": "tenants",
+      "role": "Mirra's son",
+      "note": "Nineteen. Was going to be married at harvest. Killed ch.5.",
+      "dies": 1217
     }
   ]
 }
