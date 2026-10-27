@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 24 / 40 |
-| Next | ch. 25 — *The Eastern Strip* |
+| Drafted | 28 / 40 |
+| Next | ch. 29 — *The Hill-Woman's Choice* (Vesna) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -35,10 +35,11 @@
 | ch. 4 | 1 | Maeve |
 | ch. 8 | 3 | + Ansel, Corin |
 | ch. 15 | 14 | + eleven villagers |
-| ch. 23 | 15 | + Kael |
-| ch. 25 | 17 | + Calla, and a millrace nobody can untangle |
-| ch. 30 | 18 | + Jory |
-| ch. 35 | ~30 | + Osric's people |
+| ch. 23 | 20 | + Kael, and the eleven families on the eastern strip |
+| ch. 25 | **27** | + Brennan, Calla, six tenants' paper, the millrace. Reckoned aloud in ch. 25 and deliberately loose: it counts people, not parcels. |
+| ch. 28 | 27 | no change — the nine released raiders and the four who lived are *not* dependents, and Casian does not count them |
+| ch. 30 | 30 | + Jory, and the two men who will not be named until they are |
+| ch. 35 | ~36 | + Osric's people, as they come over one at a time |
 | ch. 39 | **41** | the list |
 
 ## Continuity log
@@ -102,6 +103,19 @@
   - Irreversible: **there is a third party maintaining the old crossings.** Edric hears of the finding against the eastern strip and decides to go to Harven in the spring.
 - **ch_024 *Osric's Courtesy* (Seraine).** Three days at Thornwall. She counts four lies and can prove none. A grey hill horse in the yard whose master calls himself a farmer. Hask tells her plainly to ask *the man who took the eleven out of the barn*, and means all of it — the one flat note she does not hear. Rennick cheerfully tells her the levy is "on the sundries" and does not know he has said anything. She finds the east range room with four cups and a jug and one cup unused, and no council in the hall. She works out the levy-and-debt loop from a queue in a street.
   - Irreversible: **Seraine knows there was a secret council and that Osric wants to know which road she takes.** The Count's clock is running.
+
+
+- **ch_025 *The Eastern Strip* (Casian).** The finding at Harven is *true and used as a lever*. He buys **debts, not land** — six of eleven tenants, 460 marks at nothing in the hundred, held and not entered. **Brennan** gives 200 marks and asks to be in a thing. **Maeve** raises 400 from four men at six and a half and lends at five. The **millrace and water right** bought for eleven marks: *"A paper is a paper. A mill with water in it is a fact."* **Hew Ord**, turned off Vale land in the bad winter, is told the truth in nine sentences and believes him only because he admits it isn't personal. The race is **dug in daylight in front of forty-one people** off a notice read out in church — Corin's idea, and the best thing he does all year. **Calla** agrees to hold two parcels on three conditions: tell her everything in the book, put the mill in the village's name, and answer "I'm not going to answer that" instead of something clever.
+  - Dependency count: **27** — and *four thousand people in this county I have spent five months making decisions for without once asking any of them.*
+  - Irreversible: **the county can see him now.** A ditch dug by notice in front of witnesses is not a thing that can be undone.
+- **ch_026 *A Wolf in the Lane* (Elna).** 11 Feb. Nine men take Bradey's holding above the mill. **Elna (12)**, sent down with a basket, does the thing her mother told her in November: water, stone, count. She hears the count fail at twenty, hears two men three feet away decide a basket isn't a girl, then **runs to the mill instead of home** and gets Maeve to ring the bell. Gareth arrives in nine minutes with fourteen men and takes seven without a charge. Casian looks at the seven for four seconds, sees Thornwall behind them, spends an hour in the garden, and then does the thing that is not the law: **lets all nine go home in the morning with bread and their boots**, because *"the last time I made it so that nine men couldn't do a thing. This time I'm going to make it so that four hundred men won't."*
+  - Irreversible: **Elna is in the story as a person who did something.** The barony's law was not used and Gareth knows it and cannot say why.
+  - Coda: the story mutates to *a book of names*, *bread baked over a fire he lit with his hand*; Casian writes the versions in the back of the book under *What they say*. Rennick: *"It's a trick and I'll find it."*
+- **ch_027 *Not There* (Tolan).** The aura payoff. Berrin, a captain of nine years, cannot tell the story without being laughed at. 22 Feb: a woodward sees **eight men in a lane and then no men** — and his dog will not stand up. 24 Feb: twenty-three ride down the Ashgrove road in daylight; six men stand at the ford with no weapons; Berrin turns his head and **nineteen men are off the road and nineteen saddles are unbuckled and laid straight.** Four come home. On the 26th the horses come up the road on their own, led in by a boy of fourteen, saddles folded — and Hask forbids anybody to ride them. Tolan checks his horse, then saddles it, and rides for **Harrowmere to read Warden Selwyn's letters**, then Harven. His last word to Hask: *"I have served three men in twenty years and not one of them would have left the horses."*
+  - Irreversible: **the eastern hills now contain a thing no company will go up against**, and Tolan has left the valley. Hask's authority is broken in his own hall.
+- **ch_028 *What Seraine Saw* (Seraine).** 3 March. She walks the road for a day and finds nothing a story can be built on: no blood, no tracks, no dropped tack, nineteen saddles unbuckled. Nib's testimony: *"There wasn't the sound of a man shifting his feet."* Sennet's aunt: nine men came back and one gave her grandson a penny. **Gareth**, grey-faced, tells her it was a person and that his father knows and will not say, and that he will not be the son who says it first. She writes an eleven-page report — levy, queue, table, the Baron of Vale to be heard at Harven — and **crosses the true thing out of it**, because out loud it sounds like a duke's daughter frightened by a county, and putting a true thing where it can discredit three true things is how Thornwall wins. She sends it instead **in a sealed letter to her father alone**, four pages, naming what she saw. The reply is five lines from his clerk: the Duke will speak to her in person; stay in the east until Harven; **say nothing to the Royal Marshal, who is travelling in that country this month.**
+  - Irreversible: **one man in the kingdom now knows there is a person in the east doing this on purpose** — and someone in the crown's own apparatus is already moving through the county.
+  - Locked for ch. 29+: she has promised Osric his name goes in the report, and it does. Integrity is her method, not her weakness.
 
 ## Carry-out checklist
 
