@@ -1,61 +1,305 @@
 {
   "_comment": "SINGLE SOURCE OF TRUTH for names, ages, and the story calendar. roster.txt and ages.md are GENERATED from this file by tools/age_ledger.py. Never hand-edit a generated file. To add a character, add them here and re-run the tool.",
-
   "calendar": {
     "note": "Absolute years. Every chapter frontmatter must carry a `year:` matching one of these volumes.",
     "volumes": [
-      { "id": "volume_01", "title": "The Gardener", "year": 1217, "span": "summer – autumn" },
-      { "id": "volume_02", "title": "The Ash", "year": 1218, "span": "spring – autumn" },
-      { "id": "volume_03", "title": "The Peer", "year": 1219, "span": "winter 1219 – winter 1220" },
-      { "id": "volume_04", "title": "The Court", "year": 1221, "span": "spring – summer" },
-      { "id": "volume_05", "title": "The Gate", "year": 1222, "span": "spring – autumn" }
+      {
+        "id": "volume_01",
+        "title": "The Gardener",
+        "year": 1217,
+        "span": "summer – autumn"
+      },
+      {
+        "id": "volume_02",
+        "title": "The Ash",
+        "year": 1218,
+        "span": "spring – autumn"
+      },
+      {
+        "id": "volume_03",
+        "title": "The Peer",
+        "year": 1219,
+        "span": "winter 1219 – winter 1220"
+      },
+      {
+        "id": "volume_04",
+        "title": "The Court",
+        "year": 1221,
+        "span": "spring – summer"
+      },
+      {
+        "id": "volume_05",
+        "title": "The Gate",
+        "year": 1222,
+        "span": "spring – autumn"
+      }
     ]
   },
-
   "characters": [
-    { "name": "Casian",  "birth": 1201, "group": "vale",     "role": "protagonist, fourth son", "note": "Unmatched Current-user. The easy brother by choice." },
-    { "name": "Edric",   "birth": 1168, "group": "vale",     "role": "father, Baron of Vale", "note": "Good lord, good father, sees an ordinary son." },
-    { "name": "Maren",   "birth": 1172, "group": "vale",     "role": "mother", "note": "Knows something is different and has decided not to make it a thing." },
-    { "name": "Oswin",   "birth": 1146, "group": "vale",     "role": "paternal grandmother", "note": "Sharp, old, suspects plenty, says little." },
-    { "name": "Aldric",  "birth": 1193, "group": "vale",     "role": "eldest brother, heir", "note": "Married to Rowan. Steady." },
-    { "name": "Rowan",   "birth": 1194, "group": "vale",     "role": "Aldric's wife", "note": "" },
-    { "name": "Emric",   "birth": 1216, "group": "vale",     "role": "Aldric's son", "note": "An infant in Vol 1. Ages fastest of anyone — check the table every volume." },
-    { "name": "Gareth",  "birth": 1196, "group": "vale",     "role": "second brother", "note": "The sword." },
-    { "name": "Brennan", "birth": 1199, "group": "vale",     "role": "third brother", "note": "The charm." },
-    { "name": "Elna",    "birth": 1205, "group": "vale",     "role": "sister", "note": "His soft spot. Not a hostage. Never a hostage." },
-    { "name": "Argius",  "birth": null, "group": "other",    "role": "damaged interface fragment", "note": "Not born. Ageless. The only one who remembers." },
-
-    { "name": "Vesna",   "birth": 1198, "group": "hollow",   "role": "uplander, 19 in Vol 1; field partner", "note": "Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane." },
-    { "name": "Corin",   "birth": 1182, "group": "hollow",   "role": "Vale armsman turned field-master", "note": "Runs the unglamorous operations." },
-    { "name": "Maeve",   "birth": 1177, "group": "hollow",   "role": "the miller's widow; intelligence", "note": "Reads ledgers better than anyone alive." },
-    { "name": "Jory",    "birth": 1179, "group": "hollow",   "role": "Vale guard captain", "note": "Loyal to the baron, slowly to something else." },
-    { "name": "Kael",    "birth": 1195, "group": "hollow",   "role": "upland scout lieutenant", "note": "" },
-    { "name": "Ansel",   "birth": 1157, "group": "hollow",   "role": "the fence at Harrowmere", "note": "Knows every debt on the eastern road." },
-    { "name": "Aldous",  "birth": 1167, "group": "hollow",   "role": "surgeon-apothecary at Vale", "note": "The first man Casian cannot save fast enough." },
-    { "name": "Calla",   "birth": 1187, "group": "hollow",   "role": "Baroness of Fenwick, widow", "note": "Competent. Watching the Vale barony change." },
-
-    { "name": "Seraine", "birth": 1198, "group": "romance",  "role": "Lady Seraine Varyn", "note": "THE romance lane. The legitimate answer: make the east safe by law, not by Casian. Must never be reduced to a love interest — her own assessment is often correct." },
-
-    { "name": "Sabeth",  "birth": 1191, "group": "wild",     "role": "outsider with her own project", "note": "THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along." },
-
-    { "name": "Hask Veyr","birth": 1173, "group": "v1_foe",  "role": "warlord of the eastern hills", "note": "Cruel, patient, genuinely dangerous.", "dies": 1217 },
-    { "name": "Osric",   "birth": 1162, "group": "v1_foe",   "role": "Baron of Thornwall", "note": "Funds Hask quietly. Mistakes sentiment for weakness.", "dies": 1217 },
-
-    { "name": "Selwyn",  "birth": 1165, "group": "ash",      "role": "Warden of the Ashen Word, eastern circuit", "note": "Bureaucrat, believer, not a monster. Survives the series and is never converted." },
-    { "name": "Vaunt",   "birth": 1170, "group": "ash",      "role": "Inquisitor of the eastern writ", "note": "Competent, and learns too much. Lives." },
-    { "name": "Ferrand", "birth": 1179, "group": "ash",      "role": "Ash captain, field commander", "note": "Cruel. Does not survive the year.", "dies": 1218 },
-    { "name": "Lennah",  "birth": 1157, "group": "ash",      "role": "hedge-healer of Ashgrove", "note": "Burned. The reason Casian can never speak. Do not reuse the name.", "dies": 1218 },
-
-    { "name": "Ilse",    "birth": 1185, "group": "v3_foe",   "role": "forced the Current; dying of it", "note": "The mirror. Wants what Casian wants. Two years left at first meeting.", "dies": 1220 },
-    { "name": "Halden",  "birth": 1177, "group": "v3_foe",   "role": "Ilse's lieutenant", "note": "Loyal, unsentimental. Survives her." },
-    { "name": "Tace",    "birth": 1205, "group": "v3_foe",   "role": "14 in Vol 3; one of Ilse's people", "note": "The reason her project looks the way it does." },
-
-    { "name": "Lucan",   "birth": 1191, "group": "v4_foe",   "role": "Duke of Redmere", "note": "Elegant, competitive. Thinks every house has a price. Not erased. Lives." },
-    { "name": "Caedmon", "birth": 1163, "group": "crown",    "role": "Royal Chancellor", "note": "Observant, dry, loyal to the Crown rather than any faction." },
-    { "name": "Orlan",   "birth": 1171, "group": "crown",    "role": "Royal Marshal", "note": "Blunt soldier. Thinks the eastern Compact must be measured." },
-
-    { "name": "Severin", "birth": 1188, "group": "v5_foe",   "role": "the betrayer", "note": "Placeholder — confirm before volume 5 planning." },
-    { "name": "Ivara",   "birth": 1180, "group": "v5_foe",   "role": "foreign power", "note": "Placeholder." },
-    { "name": "Tarek",   "birth": 1175, "group": "v5_foe",   "role": "coalition commander", "note": "Placeholder." }
+    {
+      "name": "Casian",
+      "birth": 1201,
+      "group": "vale",
+      "role": "protagonist, fourth son",
+      "note": "Unmatched Current-user. The easy brother by choice."
+    },
+    {
+      "name": "Edric",
+      "birth": 1168,
+      "group": "vale",
+      "role": "father, Baron of Vale",
+      "note": "Good lord, good father, sees an ordinary son."
+    },
+    {
+      "name": "Maren",
+      "birth": 1172,
+      "group": "vale",
+      "role": "mother",
+      "note": "Knows something is different and has decided not to make it a thing."
+    },
+    {
+      "name": "Oswin",
+      "birth": 1146,
+      "group": "vale",
+      "role": "paternal grandmother",
+      "note": "Sharp, old, suspects plenty, says little."
+    },
+    {
+      "name": "Aldric",
+      "birth": 1193,
+      "group": "vale",
+      "role": "eldest brother, heir",
+      "note": "Married to Rowan. Steady."
+    },
+    {
+      "name": "Rowan",
+      "birth": 1194,
+      "group": "vale",
+      "role": "Aldric's wife",
+      "note": ""
+    },
+    {
+      "name": "Emric",
+      "birth": 1216,
+      "group": "vale",
+      "role": "Aldric's son",
+      "note": "An infant in Vol 1. Ages fastest of anyone — check the table every volume."
+    },
+    {
+      "name": "Gareth",
+      "birth": 1196,
+      "group": "vale",
+      "role": "second brother",
+      "note": "The sword."
+    },
+    {
+      "name": "Brennan",
+      "birth": 1199,
+      "group": "vale",
+      "role": "third brother",
+      "note": "The charm."
+    },
+    {
+      "name": "Elna",
+      "birth": 1205,
+      "group": "vale",
+      "role": "sister",
+      "note": "His soft spot. Not a hostage. Never a hostage."
+    },
+    {
+      "name": "Argius",
+      "birth": null,
+      "group": "other",
+      "role": "damaged interface fragment",
+      "note": "Not born. Ageless. The only one who remembers."
+    },
+    {
+      "name": "Vesna",
+      "birth": 1198,
+      "group": "hollow",
+      "role": "uplander, 19 in Vol 1; field partner",
+      "note": "Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane."
+    },
+    {
+      "name": "Corin",
+      "birth": 1182,
+      "group": "hollow",
+      "role": "Vale armsman turned field-master",
+      "note": "Runs the unglamorous operations."
+    },
+    {
+      "name": "Maeve",
+      "birth": 1177,
+      "group": "hollow",
+      "role": "the miller's widow; intelligence",
+      "note": "Reads ledgers better than anyone alive."
+    },
+    {
+      "name": "Jory",
+      "birth": 1179,
+      "group": "hollow",
+      "role": "Vale guard captain",
+      "note": "Loyal to the baron, slowly to something else."
+    },
+    {
+      "name": "Kael",
+      "birth": 1195,
+      "group": "hollow",
+      "role": "upland scout lieutenant",
+      "note": ""
+    },
+    {
+      "name": "Ansel",
+      "birth": 1157,
+      "group": "hollow",
+      "role": "the fence at Harrowmere",
+      "note": "Knows every debt on the eastern road."
+    },
+    {
+      "name": "Aldous",
+      "birth": 1167,
+      "group": "hollow",
+      "role": "surgeon-apothecary at Vale",
+      "note": "The first man Casian cannot save fast enough. The network is founded the day after.",
+      "dies": 1217
+    },
+    {
+      "name": "Calla",
+      "birth": 1187,
+      "group": "hollow",
+      "role": "Baroness of Fenwick, widow",
+      "note": "Competent. Watching the Vale barony change."
+    },
+    {
+      "name": "Seraine",
+      "birth": 1198,
+      "group": "romance",
+      "role": "Lady Seraine Varyn",
+      "note": "THE romance lane. The legitimate answer: make the east safe by law, not by Casian. Must never be reduced to a love interest — her own assessment is often correct."
+    },
+    {
+      "name": "Sabeth",
+      "birth": 1191,
+      "group": "wild",
+      "role": "outsider with her own project",
+      "note": "THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along."
+    },
+    {
+      "name": "Hask Veyr",
+      "birth": 1173,
+      "group": "v1_foe",
+      "role": "warlord of the eastern hills",
+      "note": "Cruel, patient, genuinely dangerous.",
+      "dies": 1217
+    },
+    {
+      "name": "Osric",
+      "birth": 1162,
+      "group": "v1_foe",
+      "role": "Baron of Thornwall",
+      "note": "Funds Hask quietly. Mistakes sentiment for weakness.",
+      "dies": 1217
+    },
+    {
+      "name": "Selwyn",
+      "birth": 1165,
+      "group": "ash",
+      "role": "Warden of the Ashen Word, eastern circuit",
+      "note": "Bureaucrat, believer, not a monster. Survives the series and is never converted."
+    },
+    {
+      "name": "Vaunt",
+      "birth": 1170,
+      "group": "ash",
+      "role": "Inquisitor of the eastern writ",
+      "note": "Competent, and learns too much. Lives."
+    },
+    {
+      "name": "Ferrand",
+      "birth": 1179,
+      "group": "ash",
+      "role": "Ash captain, field commander",
+      "note": "Cruel. Does not survive the year.",
+      "dies": 1218
+    },
+    {
+      "name": "Lennah",
+      "birth": 1157,
+      "group": "ash",
+      "role": "hedge-healer of Ashgrove",
+      "note": "Burned. The reason Casian can never speak. Do not reuse the name.",
+      "dies": 1218
+    },
+    {
+      "name": "Ilse",
+      "birth": 1185,
+      "group": "v3_foe",
+      "role": "forced the Current; dying of it",
+      "note": "The mirror. Wants what Casian wants. Two years left at first meeting.",
+      "dies": 1220
+    },
+    {
+      "name": "Halden",
+      "birth": 1177,
+      "group": "v3_foe",
+      "role": "Ilse's lieutenant",
+      "note": "Loyal, unsentimental. Survives her."
+    },
+    {
+      "name": "Tace",
+      "birth": 1205,
+      "group": "v3_foe",
+      "role": "14 in Vol 3; one of Ilse's people",
+      "note": "The reason her project looks the way it does."
+    },
+    {
+      "name": "Lucan",
+      "birth": 1191,
+      "group": "v4_foe",
+      "role": "Duke of Redmere",
+      "note": "Elegant, competitive. Thinks every house has a price. Not erased. Lives."
+    },
+    {
+      "name": "Caedmon",
+      "birth": 1163,
+      "group": "crown",
+      "role": "Royal Chancellor",
+      "note": "Observant, dry, loyal to the Crown rather than any faction."
+    },
+    {
+      "name": "Orlan",
+      "birth": 1171,
+      "group": "crown",
+      "role": "Royal Marshal",
+      "note": "Blunt soldier. Thinks the eastern Compact must be measured."
+    },
+    {
+      "name": "Severin",
+      "birth": 1188,
+      "group": "v5_foe",
+      "role": "the betrayer",
+      "note": "Placeholder — confirm before volume 5 planning."
+    },
+    {
+      "name": "Ivara",
+      "birth": 1180,
+      "group": "v5_foe",
+      "role": "foreign power",
+      "note": "Placeholder."
+    },
+    {
+      "name": "Tarek",
+      "birth": 1175,
+      "group": "v5_foe",
+      "role": "coalition commander",
+      "note": "Placeholder."
+    },
+    {
+      "name": "Tolan",
+      "birth": 1180,
+      "group": "v1_foe",
+      "role": "Hask's third captain",
+      "note": "The only man in Osric's hall who understands what was in the room. Not believed. The one who survives."
+    }
   ]
 }

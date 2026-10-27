@@ -40,13 +40,14 @@ for the whole volume, and the next volume's table entry is the age they turn.
 | Corin | 1182 | 35 | 36 | 37 | 39 | 40 |
 | Jory | 1179 | 38 | 39 | 40 | 42 | 43 |
 | Maeve | 1177 | 40 | 41 | 42 | 44 | 45 |
-| Aldous | 1167 | 50 | 51 | 52 | 54 | 55 |
+| Aldous | 1167 | 50 | † | † | † | † |
 | Ansel | 1157 | 60 | 61 | 62 | 64 | 65 |
 | **Romance** | |  |  |  |  |  |
 | Seraine | 1198 | 19 | 20 | 21 | 23 | 24 |
 | **Unaffiliated** | |  |  |  |  |  |
 | Sabeth | 1191 | 26 | 27 | 28 | 30 | 31 |
 | **Volume 1 — antagonists** | |  |  |  |  |  |
+| Tolan | 1180 | 37 | 38 | 39 | 41 | 42 |
 | Hask Veyr | 1173 | 44 | † | † | † | † |
 | Osric | 1162 | 55 | † | † | † | † |
 | **The Ash — volume 2** | |  |  |  |  |  |

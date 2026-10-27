@@ -96,9 +96,13 @@ The Keeping is **texture, not structure**. It gives the marches age and atmosphe
 
 ## The Hollow
 
-**The Hollow is his.** He builds it, in volume 1, out of nothing and nobody: a miller's widow who reads ledgers, a fence who knows every debt on the eastern road, an upland girl who can walk a county in the dark, his father's armsman who has been waiting thirty years for someone to ask him to do more than guard a gate.
+**The Hollow is his, and it is five months old.** He builds it, in volume 1, out of nothing and nobody: a miller's widow who reads ledgers, a fence who knows every debt on the eastern road, an upland girl who can walk a county in the dark, his father's armsman who has been waiting thirty years for someone to ask him to do more than guard a gate.
 
-It is not inherited. It is not ancient. There is no predecessor and nothing to investigate. He makes it, one person at a time, and it is the best pleasure of his life.
+It is not inherited. It is not ancient. There is no predecessor, no lineage, no archive, no prophecy, and nothing to investigate. **Nothing about it predates the summer of 1217.** He makes it, one person at a time, and it is the best pleasure of his life.
+
+There is no secret behind it, and the series must never imply one. A reader who has seen too many of these stories will spend volume 1 waiting to be told that the Hollow was always there. The answer is no. It is a boy, a widow, a fence, an armsman, a scout, and a list of people who owe him. That is all of it.
+
+**How sixteen people frighten a county:** not by numbers, and not by age. Fear attaches to *effects*. A ford the whole east used last year is not used now. Eleven people are not in a barn. Nine horsemen are seen on a road and then are not there. Nobody in the marches is counting the membership of anything — they are counting the things that stopped happening, and arriving at the wrong answer, which is *curse*.
 
 **It must never read as primitive, scrappy, or weak.** This is the single biggest failure of the previous drafts: an organization nobody fears, staffed by people who felt like helpers. The Hollow is not a plucky resistance. It is the quietest and most frightening thing in the eastern half of the world, and that reputation is **earned in front of the reader, then spent**.
 

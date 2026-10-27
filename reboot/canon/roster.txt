@@ -25,7 +25,7 @@ Calla   # born 1187, age 30 · Baroness of Fenwick, widow. Competent. Watching t
 Corin   # born 1182, age 35 · Vale armsman turned field-master. Runs the unglamorous operations.
 Jory    # born 1179, age 38 · Vale guard captain. Loyal to the baron, slowly to something else.
 Maeve   # born 1177, age 40 · the miller's widow; intelligence. Reads ledgers better than anyone alive.
-Aldous  # born 1167, age 50 · surgeon-apothecary at Vale. The first man Casian cannot save fast enough.
+Aldous  # born 1167, age 50 · surgeon-apothecary at Vale — dies 1217. The first man Casian cannot save fast enough. The network is founded the day after.
 Ansel   # born 1157, age 60 · the fence at Harrowmere. Knows every debt on the eastern road.
 
 # — Romance —
@@ -35,6 +35,7 @@ Seraine  # born 1198, age 19 · Lady Seraine Varyn. THE romance lane. The legiti
 Sabeth  # born 1191, age 26 · outsider with her own project. THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along.
 
 # — Volume 1 — antagonists —
+Tolan      # born 1180, age 37 · Hask's third captain. The only man in Osric's hall who understands what was in the room. Not believed. The one who survives.
 Hask Veyr  # born 1173, age 44 · warlord of the eastern hills — dies 1217. Cruel, patient, genuinely dangerous.
 Osric      # born 1162, age 55 · Baron of Thornwall — dies 1217. Funds Hask quietly. Mistakes sentiment for weakness.
 

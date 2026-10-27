@@ -1,0 +1,1501 @@
+From f4109b37877203e4f095f6f243f9ec19bfdd28ff Mon Sep 17 00:00:00 2001
+From: Reboot Session <reboot@local>
+Date: Tue, 27 Oct 2026 14:55:34 +0000
+Subject: [PATCH] reboot: new canon foundation for A God in the Garden (v1.0)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+From-scratch reboot. The previous material is left untouched on main and is
+now reference only. No manuscripts existed, so nothing was discarded at prose
+level.
+
+Design decisions taken:
+
+- Escalation engine is dependency, not opposition. He wants an east that never
+  needs permission from anyone; his method is solving everything himself; so
+  every enemy he removes leaves behind people who no longer have to handle the
+  next problem. Escalation is counted in people, not enemy size.
+
+- The exile is load-bearing. He remembers a world that ended and can never say
+  so, because the Ash burns people for claiming another life. The garden is
+  what a homesick man builds when he cannot go home. Grief is not fear, guilt,
+  or strain, so this survives the no-cost rule.
+
+- The Hollow is now BUILT by him in volume 1, one recruit at a time, not
+  inherited. No ancient order, no First Watch, nothing to investigate. The
+  Keeping survives as folk texture only. The Hollow is explicitly feared, not
+  scrappy: its method is absence, it never loses in front of the reader, and
+  its reputation escalates across five volumes in enemy dialogue.
+
+- The Council Beat is mandatory once per volume: the enemy's leadership in
+  session and competent, Casian in the room unnoticed, then he speaks once.
+  Fixes the old flaw of only ever showing the men he dealt with while the real
+  leadership stayed offstage as weather. Inverts in vol 3 (Ilse sees him first)
+  and cannot be repeated in vol 5.
+
+- Romance is one lane: Seraine. Vesna and Sabeth are removed from romance and
+  given structural jobs instead — Vesna is the counter-evidence to dependency,
+  Sabeth is the question he cannot charm his way out of.
+
+- Ages are now generated. canon/characters.json is the single source of truth
+  and tools/age_ledger.py generates roster.txt and ages.md, with --check for
+  staleness and --check-year to audit chapter frontmatter. Absolute calendar
+  1217-1222. This is the structural fix for the age drift that broke every
+  previous draft.
+
+- Five volumes, each a different kind of story: intimate, institutional, a
+  peer, social, foundational.
+
+Files:
+  reboot/README.md
+  reboot/00_discussion.md            diagnosis and the argument for the reboot
+  reboot/canon/bible.md              premise, Current, Argius, exile, Hollow,
+                                     Council Beat, knowledge locks
+  reboot/canon/constitution.md       16 rules, mandatory and testable
+  reboot/canon/series_arc.md         five volumes with the beat placed
+  reboot/canon/characters.json       names, ages, calendar (edit this)
+  reboot/canon/roster.txt            generated
+  reboot/canon/ages.md               generated, per-volume age table
+  reboot/tools/age_ledger.py         generator + verifier
+  reboot/notes_pre_reboot_review.md  audit of the archived version
+---
+ reboot/00_discussion.md           | 154 ++++++++++++++++++
+ reboot/README.md                  |  36 +++++
+ reboot/canon/ages.md              |  88 +++++++++++
+ reboot/canon/bible.md             | 254 +++++++++++++++++++++++++++++
+ reboot/canon/characters.json      |  61 +++++++
+ reboot/canon/constitution.md      | 130 +++++++++++++++
+ reboot/canon/roster.txt           |  64 ++++++++
+ reboot/canon/series_arc.md        | 141 +++++++++++++++++
+ reboot/notes_pre_reboot_review.md | 171 ++++++++++++++++++++
+ reboot/tools/age_ledger.py        | 255 ++++++++++++++++++++++++++++++
+ 10 files changed, 1354 insertions(+)
+ create mode 100644 reboot/00_discussion.md
+ create mode 100644 reboot/README.md
+ create mode 100644 reboot/canon/ages.md
+ create mode 100644 reboot/canon/bible.md
+ create mode 100644 reboot/canon/characters.json
+ create mode 100644 reboot/canon/constitution.md
+ create mode 100644 reboot/canon/roster.txt
+ create mode 100644 reboot/canon/series_arc.md
+ create mode 100644 reboot/notes_pre_reboot_review.md
+ create mode 100644 reboot/tools/age_ledger.py
+
+diff --git a/reboot/00_discussion.md b/reboot/00_discussion.md
+new file mode 100644
+index 0000000..8ed826f
+--- /dev/null
++++ b/reboot/00_discussion.md
+@@ -0,0 +1,154 @@
++# Reboot Discussion — *A God in the Garden*
++
++Nothing here is decided. This is the argument, laid out so we can disagree with it.
++
++---
++
++## 0. One question before any of this matters
++
++The repo says 120 chapters are complete. The repo contains zero. If those manuscripts exist somewhere, say so now — because a reboot that throws away 300,000 written words is a different decision from a reboot that throws away an outline.
++
++I'm going to assume they don't exist and were generated-then-lost, or never written. If I'm wrong, stop me here.
++
++---
++
++## 1. Diagnosis: why the current version loops
++
++This isn't a taste problem. It's a mechanical one, and it's traceable to a single rule.
++
++`constitution.md` rule 1 says Casian is never threatened, and his power costs him **no strength, guilt, sanity, or moral debt.** That's a legitimate design thesis for this genre — it's the one thing that makes the story distinct instead of being another "overpowered but secretly suffering" story. I'd keep it.
++
++But look at what it eliminates. In an OP story you cannot escalate *danger*, because there is none. The only thing left that can escalate is **cost** — and rule 1 removes cost too. So there is nothing left to escalate except the size of the enemy.
++
++Which is exactly what the current arc does:
++
++> warlord → church → magical corporation → duke → pirates → everyone
++
++Each volume is a bigger faction, and each resolution is the same act: they arrive certain, they commit an atrocity, they get erased in stages, and Casian converts the wreckage into infrastructure. Then he goes back to the garden. Volumes 1, 2, and 3 are structurally the same book, and I doubt it's laziness — it's what a story does when it has no other available variable.
++
++**Two structural crutches make it worse:**
++
++**The Hollow.** An ancient order that already exists, already owns the eastern marches, already has waystations, ledgers, storehouses, and routes, and obeys him. It's enormously convenient — and every convenience removes a scene. It means the plot can advance when Casian isn't in the room, and it means his "domain-building" is mostly *inheriting* a domain rather than building one. The best material in the current Volume 1 is ch. 21, where he "quietly buys debts, recruits a miller" — that's a sixteen-year-old actually building something. Those are the only two sentences in 240 chapters of outline where the domain is *earned*.
++
++**The First Watch.** Pre-birth Argius spent centuries building the Hollow so that Casian would be safe when he arrived. It explains why the world already contains a machine that serves him. But note what canon then has to do to it: it can never be investigated (rule 5), never be learned by anyone (rule 6), and never be explained on the page (bible). It is a three-hundred-year backstory that the story is forbidden to touch. That's not worldbuilding, that's a load-bearing excuse. Anything that has to be sealed off by three separate rules is usually something that shouldn't be in the room.
++
++So: no cost, no danger, no mystery he's allowed to chase, no domain he had to build. What's left is the loop.
++
++---
++
++## 2. What's worth keeping
++
++Four things, and I'd defend all four against a cleaner, more conventional version of this book.
++
++**The thesis: the question is never whether he can win, it's how much of the board he chooses to take.** This is genuinely rare. Almost every "overpowered" story is secretly a story about anxiety. This one isn't. Keep it.
++
++**The garden.** The title is the best idea in the project. *A god in a garden* — not on a throne, not in a temple, not in a tomb. He has total power and uses it to grow roses and make sure his sister's village has bread. The genre's usual endpoint is a throne; yours is a Tuesday afternoon. Don't lose that.
++
++**Warmth as the goal, not the camouflage.** The family aren't hostages to the plot and aren't a disguise he's terrified of losing. They're the reason. Most "hidden power" stories make the family a liability. Yours makes them the point, which means the reader is rooting for domesticity rather than for the reveal. That inversion is the reason this premise could work at all.
++
++**The mask is chosen.** He's the easy fourth son because he likes it. That's a much more interesting protagonist than one who's forced into it.
++
++---
++
++## 3. What to cut
++
++**Cut the Hollow as an inheritance. Keep it as a project.** He should build his own network from nothing, over the course of volume 1 — a miller, a fence, a clerk, a girl from the uplands who's better at this than he is. That's more interesting, it's earned, and it lets the organization grow at the same rate the reader's understanding does. It also kills the need for the First Watch entirely.
++
++**Cut the First Watch.** Whole thing. If you want old atmosphere in the marches, you don't need a pre-birth AI to explain it — the marches are old, there are older things in them, and he's the newest thing pretending to be old. That's better than a backstory nobody may mention.
++
++**Cut the three-romance-lane lock.** Right now Seraine, Vesna, and Sabeth all relate to him through the same locked knowledge ("she suspects, she cannot prove, she stays"). That's one relationship written three times with different hair. The knowledge lock makes all three structurally identical, which is why they all get a ch. 36 confrontation and none of them ever change. Either give each of them a *different kind* of relationship to him — not a different personality, a different angle — or cut to two.
++
++**Cut the faction ladder.** See §5.
++
++---
++
++## 4. The decision that actually matters
++
++**If power costs him nothing, what escalates?**
++
++That's the whole reboot. Everything else is casting. Three real options:
++
++### Option A — Dependency
++His stated goal is that the marches never again need permission from kings, churches, or armies. His method is to solve every problem himself. So the story escalates as **dependency**: every threat he erases leaves behind people who now know they don't have to handle the next one. By volume 4 he has a world that cannot function without him — which is the exact opposite of the thing he said he wanted. And he's smart enough to notice, and too fond of these people to stop.
++
++*He wants to build a place that doesn't need a god, and the only tool he has is being one.*
++
++This escalates without a bigger villain, preserves rule 1 absolutely, and turns his own success into the antagonist. It also reframes the villains: they aren't the story, they're **interruptions** — the world's demands on his time. Which is why a rotating cast of antagonists is suddenly fine. They were never the engine.
++
++### Option B — Visibility
++The mask gets heavier. Every solution makes him more public, more necessary, more *offered* things. The world keeps trying to promote him: a charter, a title, a marriage, a throne. Saying no gets harder each time. Escalation is the number of people who need him to stop being the fourth son.
++
++Good, and compatible with A. But on its own it's a court intrigue story, and it gets thin around volume 3.
++
++### Option C — Exile
++He died somewhere and cannot go back, cannot say so, and cannot explain why the garden matters. The escalating thing is not threat or cost but **grief**: he keeps finding things in this world that remind him of the one he lost, and eventually has to decide whether he's making Varenthos into a replacement or accepting that it's something else entirely.
++
++This is the strongest emotional engine available and the current version has deliberately sealed it off. Which brings us to §6.
++
++### My recommendation
++
++**A, with C underneath it, and B as texture.** A homesick god builds a place so safe that it stops needing him, and discovers he doesn't know how to be unnecessary.
++
++That gives you a spine for five volumes, it never threatens him, it never makes him feel guilty about power, and it makes the ending obvious in the best way: the final payoff isn't an erasure, it's him standing in a garden he isn't required to defend.
++
++---
++
++## 5. The antagonist fix (this is the one that breaks the loop)
++
++The genre problem with an unbeatable protagonist is that every antagonist becomes a countdown to an erasure, and the reader knows the number.
++
++The fix isn't stronger enemies. It's enemies he **can't erase without becoming someone he doesn't want to be.** Not because they're more powerful — because they're right, or loved, or necessary, or doing the same thing he's doing for reasons he respects.
++
++So the ladder becomes:
++
++| Vol | Kind of story | Antagonist role |
++|---|---|---|
++| 1 | Intimate. Local lord, real people, small scale. | A man who is simply cruel and can be removed. Establishes the ceiling. |
++| 2 | Institutional. The Church. | A *system* with legitimacy. Killing its commander doesn't stop it. |
++| 3 | Peer. Someone else who forces the Current. | A rival who is not evil. Erasing them is available and would be a defeat. |
++| 4 | Social. Court. | People he can beat with wit and never with power. |
++| 5 | Foundational. The conclave. | The world itself deciding what to make of him. |
++
++Volume 3 is the hinge. The moment he meets someone whose project genuinely conflicts with his and who he can't just remove, the series stops being a countdown and becomes a story.
++
++---
++
++## 6. The isekai question
++
++Right now the reincarnation does one job: it justifies Argius and the modern voice. Everything else about it is locked shut. No character learns it, it's never explained, and it's never used.
++
++**A promise with no payoff is a hole.** Three ways out:
++
++**1. Cut it.** He's simply the most powerful person in the world, born here, and Argius is something he found or inherited or woke up with. Saves complexity. Costs you the premise's flavor and the title's irony.
++
++**2. Keep it dormant.** It stays exactly as-is: reader-only knowledge, private to him. This is what the current canon does, and I think it's the weakest choice — it's a secret with no consequence.
++
++**3. Make the exile load-bearing.** This is what I'd argue for. He remembers another world. He can never describe it, can never return, and if he ever said it out loud he'd be confirming every heresy the Church burns people for. So the garden isn't a hobby and isn't camouflage — it's the thing a homesick person builds when they can't go home. He is making a place worth living in because he lost the last one.
++
++Under option 3 the isekai stops being genre furniture and becomes the reason he's gentle. And it's the only backstory element that survives rule 1 — because grief is not fear, not guilt, and not strain. He carries it the way a person carries a language nobody else speaks.
++
++It also gives Argius a real job. Argius is the only other thing that remembers. That's what makes their relationship matter instead of being exposition with a personality.
++
++---
++
++## 7. Shape
++
++I'd cut from six volumes to **five**, and the count is the least important part of this — the important part is that **each volume must be a different *kind* of story**, because volume takes its shape from the kind of interruption, not from the size of the enemy.
++
++- **I — The Garden.** Intimate and domestic. He builds the first small version of the thing. A cruel man tests it and is removed. Ends with him understanding he's started something.
++- **II — The Fire.** Institutional. A legitimate authority decides the marches are its business. He can't win by erasure; he has to break a system's credibility.
++- **III — The Peer.** Someone else with power, and a project that conflicts with his. The first real argument in the series.
++- **IV — The Court.** He chooses the game. Wit, capers, masks, and the cost of being wanted.
++- **V — The Gate.** He calls the world to him before it decides what he is, and finishes by choosing a life instead of a title.
++
++240 chapters was never the problem. The problem was that the first three volumes had the same shape. Five differently-shaped volumes beat six alike ones.
++
++---
++
++## 8. What I need from you
++
++1. **Do the 120 chapters exist?** (§0)
++2. **Which engine** — A, B, C, or A+C? (§4)
++3. **Isekai: cut, dormant, or load-bearing?** (§6)
++4. **Prose or plan?** Last time the plan got built and the book didn't. Before we plan a second time, I want to know whether volume 1 actually gets *written* this time — because if the answer is "plan," I'll plan differently (fewer volumes, more detail per chapter) than if the answer is "write."
++5. **How many of the names survive?** I'd keep *A God in the Garden*, Casian, Vale, and probably Argius. The rest are open.
+diff --git a/reboot/README.md b/reboot/README.md
+new file mode 100644
+index 0000000..0b4648d
+--- /dev/null
++++ b/reboot/README.md
+@@ -0,0 +1,36 @@
++# Reboot — Working Files
++
++A from-scratch rebuild of *A God in the Garden*. **Not** a revision of the material in `/isekai`.
++
++## Status
++
++| | |
++|---|---|
++| Old project | Archived. Reference only — a quarry for names and individual scenes, nothing more. |
++| Old manuscripts | Do not exist. Nothing to salvage at prose level. |
++| Mode | **Plan thoroughly, then draft.** |
++| Decisions locked | A+C engine · exile load-bearing · 5 volumes · one romance lane (Seraine) · no inherited Hollow · no First Watch |
++| Signature set piece | **The Council Beat** — the enemy's leadership in a room, Casian in the corner unnoticed, then he speaks |
++| Ages | Generated from `canon/characters.json` → `canon/ages.md`. Never written from memory. |
++
++## What's here
++
++- `00_discussion.md` — the diagnosis and the argument that led to the reboot.
++- `canon/bible.md` — premise, the Current, Argius, the exile, the Keeping, character and knowledge locks.
++- `canon/constitution.md` — the law. Rewritten for the new engine; several rules are new.
++- `canon/series_arc.md` — five volumes, each a different *kind* of story.
++- `canon/roster.txt` — canonical names, ages, roles. **Generated** — do not edit.
++- `canon/ages.md` — age of every character in every volume. **Generated** — do not edit.
++- `canon/characters.json` — the single source of truth for names, ages, and the calendar. Edit this.
++- `tools/age_ledger.py` — regenerates the two above; `--check` verifies, `--check-year` audits chapters.
++
++## Next, in order
++
++1. Volume 1 chapter-level plan (40 beats, sentence-per-beat, no scenes written yet).
++2. Read-through and argument — I'd rather you break the chapter plan before prose.
++3. Draft volume 1.
++4. Extend the chapter plan only as drafting catches up. **Never plan volume 5 before drafting volume 1.** That is precisely what killed the last version.
++
++## The one-line pitch, for reference
++
++> A homesick god builds a place so safe that it stops needing him — and discovers he doesn't know how to be unnecessary.
+diff --git a/reboot/canon/ages.md b/reboot/canon/ages.md
+new file mode 100644
+index 0000000..eb698af
+--- /dev/null
++++ b/reboot/canon/ages.md
+@@ -0,0 +1,88 @@
++# Age Ledger
++> **GENERATED** from `canon/characters.json` by `tools/age_ledger.py`. Do not edit by hand.
++> If a number here disagrees with a chapter, the chapter is wrong.
++
++## The calendar
++
++| Volume | Title | Year | Season span |
++|---|---|---|---|
++| 1 | *The Gardener* | 1217 | summer – autumn |
++| 2 | *The Ash* | 1218 | spring – autumn |
++| 3 | *The Peer* | 1219 | winter 1219 – winter 1220 |
++| 4 | *The Court* | 1221 | spring – summer |
++| 5 | *The Gate* | 1222 | spring – autumn |
++
++**Rule:** every chapter's frontmatter carries `year:`. Ages are computed, never invented.
++A birthday is not a scene unless it is a scene. When in doubt, a character is the age in this table
++for the whole volume, and the next volume's table entry is the age they turn.
++
++## Ages by volume
++
++| Character | Birth | V1 | V2 | V3 | V4 | V5 |
++|---|---|---|---|---|---|---|
++| **The Vale household** | |  |  |  |  |  |
++| Emric | 1216 | 1 | 2 | 3 | 5 | 6 |
++| Elna | 1205 | 12 | 13 | 14 | 16 | 17 |
++| Casian | 1201 | 16 | 17 | 18 | 20 | 21 |
++| Brennan | 1199 | 18 | 19 | 20 | 22 | 23 |
++| Gareth | 1196 | 21 | 22 | 23 | 25 | 26 |
++| Rowan | 1194 | 23 | 24 | 25 | 27 | 28 |
++| Aldric | 1193 | 24 | 25 | 26 | 28 | 29 |
++| Maren | 1172 | 45 | 46 | 47 | 49 | 50 |
++| Edric | 1168 | 49 | 50 | 51 | 53 | 54 |
++| Oswin | 1146 | 71 | 72 | 73 | 75 | 76 |
++| **Argius** | |  |  |  |  |  |
++| Argius | — | — | — | — | — | — |
++| **The Hollow — built by Casian, not inherited** | |  |  |  |  |  |
++| Vesna | 1198 | 19 | 20 | 21 | 23 | 24 |
++| Kael | 1195 | 22 | 23 | 24 | 26 | 27 |
++| Calla | 1187 | 30 | 31 | 32 | 34 | 35 |
++| Corin | 1182 | 35 | 36 | 37 | 39 | 40 |
++| Jory | 1179 | 38 | 39 | 40 | 42 | 43 |
++| Maeve | 1177 | 40 | 41 | 42 | 44 | 45 |
++| Aldous | 1167 | 50 | 51 | 52 | 54 | 55 |
++| Ansel | 1157 | 60 | 61 | 62 | 64 | 65 |
++| **Romance** | |  |  |  |  |  |
++| Seraine | 1198 | 19 | 20 | 21 | 23 | 24 |
++| **Unaffiliated** | |  |  |  |  |  |
++| Sabeth | 1191 | 26 | 27 | 28 | 30 | 31 |
++| **Volume 1 — antagonists** | |  |  |  |  |  |
++| Hask Veyr | 1173 | 44 | † | † | † | † |
++| Osric | 1162 | 55 | † | † | † | † |
++| **The Ash — volume 2** | |  |  |  |  |  |
++| Ferrand | 1179 | 38 | 39 | † | † | † |
++| Vaunt | 1170 | 47 | 48 | 49 | 51 | 52 |
++| Selwyn | 1165 | 52 | 53 | 54 | 56 | 57 |
++| Lennah | 1157 | 60 | 61 | † | † | † |
++| **Volume 3** | |  |  |  |  |  |
++| Tace | 1205 | 12 | 13 | 14 | 16 | 17 |
++| Ilse | 1185 | 32 | 33 | 34 | † | † |
++| Halden | 1177 | 40 | 41 | 42 | 44 | 45 |
++| **The Court — volume 4** | |  |  |  |  |  |
++| Lucan | 1191 | 26 | 27 | 28 | 30 | 31 |
++| **The Crown — volume 4** | |  |  |  |  |  |
++| Orlan | 1171 | 46 | 47 | 48 | 50 | 51 |
++| Caedmon | 1163 | 54 | 55 | 56 | 58 | 59 |
++| **Volume 5 (placeholders — confirm before planning)** | |  |  |  |  |  |
++| Severin | 1188 | 29 | 30 | 31 | 33 | 34 |
++| Ivara | 1180 | 37 | 38 | 39 | 41 | 42 |
++| Tarek | 1175 | 42 | 43 | 44 | 46 | 47 |
++
++† = dead by this volume. — = not applicable (ageless).
++
++## Drift traps
++
++These are the ones that broke the previous drafts. Check them every time.
++
++- **Emric** is an infant in Volume 1 and a small boy by Volume 5. He is the fastest-moving
++  age in the cast and the easiest to leave behind.
++- **Elna** is twelve when the story opens and seventeen when it ends. Her voice must change.
++  A twelve-year-old and a seventeen-year-old do not speak the same way.
++- **Casian** is sixteen at the start and twenty-one at the end. He is a boy in Volume 1 and an
++  adult by Volume 5, and the mask has to survive that. A twenty-one-year-old playing the
++  overlooked fourth son is a different performance from a sixteen-year-old doing it.
++- **Seraine** is three years older than him and stays three years older. Do not let the gap
++  drift toward zero because it reads better in a scene.
++- **Oswin** is seventy-one at the start. Over five years that is a real risk, and it should be
++  felt without ever being used as a threat.
++
+diff --git a/reboot/canon/bible.md b/reboot/canon/bible.md
+new file mode 100644
+index 0000000..c4ca575
+--- /dev/null
++++ b/reboot/canon/bible.md
+@@ -0,0 +1,254 @@
++# Story Bible — *A God in the Garden* (reboot)
++> Master reference. Supersedes everything in the archived `/isekai` project.
++> Version 1.0
++
++---
++
++## The pitch
++
++Casian Vale is the easygoing sixteen-year-old fourth son of a border baron in the eastern marches: a gardener, a fond uncle, the boy no lord remembers after supper. He is also the most dangerous being in the world, and the only thing he wants is a life.
++
++He is not hiding. He is not scheming. He is not afraid, and nothing he does costs him anything — not strength, not sleep, not a single night's doubt. He can act through the Current from any distance: see, fold, conceal, sever, erase. He does it the way a man opens a window.
++
++What no one knows, and what Casian will never be able to say, is that he has already lost one world. He remembers it. He cannot describe it. If he ever spoke it aloud he would be confirming every heresy the Ash burns people for, and so the truth will die with him and with Argius, the only other thing that remembers.
++
++So he builds. Not a throne — a garden. A place worth living in, made by someone who has watched a place stop existing.
++
++**The story promise:** a warm, menacing OP power fantasy about a man who keeps winning every fight and slowly losing the thing he was fighting for — which was never safety. It was being unnecessary.
++
++---
++
++## The Current
++
++The world's substrate. Ordinary people touch it by accident: a hedge-witch's charm that sometimes works, a ward that holds, a fire that won't catch. Argius gives Casian total access.
++
++**What he can do:** observe any place he has touched or can reach; move things; close a road; stop a heart; unmake a person so completely that the world calls it an old curse.
++
++**What it costs:** nothing. This is the load-bearing rule of the series and it does not bend. No strain, no debt, no nosebleed, no hollowness. He is not paying a price. He is not a candle burning at both ends.
++
++**Why it works:** because the story is not about whether he can. It never was. The question is how much of the world he chooses to take, and what taking it does to the only life he actually wanted.
++
++**Register:** outsiders call it sorcery, witchcraft, a curse, an old horror, the work of something in the hills. Nobody says "the Current" except Casian and Argius, in private.
++
++---
++
++## Argius
++
++A damaged interface fragment. Not a spirit, not a god, not a person. It has no body, appears only in Casian's mind, and has no agenda beyond the dry business of being useful.
++
++**Voice:** terse. Military. Occasionally, flatly funny, in the way of a colleague who has been in the room too long.
++
++> "You are planting a tree that will not bear fruit for forty years."
++> "I know."
++> "You will be here for all of them."
++> "Yes."
++> "...Good."
++
++**The change from the old version:** Argius remembers the lost world. Imperfectly, in fragments, with gaps it does not pretend to fill. It is the only witness. This makes it a companion instead of an exposition device — two exiles who can only talk about the thing that matters to each other, in a language nobody else on the continent speaks.
++
++Argius does not offer comfort. It does not counsel grief. It simply remembers alongside him, which is the entire point.
++
++---
++
++## The exile
++
++Casian died in another world. A damaged Argius fragment carried a recoverable pattern of his consciousness across and rebooted inside a child. He was born Casian Vale, fourth son, in a house that loved him.
++
++He remembers both lives. The old one is not a set of plot hooks — no technology to reproduce, no empire to rebuild, no plan to return. It is simply a place that ended, and a person who is gone, and a language with no second speaker.
++
++**Why it matters:** because it is the explanation for everything warm about him. The garden is not a hobby and not a disguise. It is what a homesick man builds when he cannot go home. He makes things beautiful, not merely safe, because the last world stopped existing and safety turns out not to have been the point.
++
++He plants for sixty years out. He is never in a hurry. Only he knows why.
++
++**Why it is never said:** the Ash burns people for claiming other lives. To speak it is to hand them the pyre. So the truth is unspeakable, and the series will never let a character learn it, and Casian will never say it aloud even alone — only Argius hears it, and Argius remembers it already.
++
++**Why it survives the no-cost rule:** grief is not fear, not guilt, not strain, not moral debt. Casian does not brood, does not flinch, does not hesitate. He is simply a man with a country-shaped absence in him, and he has decided to be happy anyway. That decision is character, not damage.
++
++---
++
++## Casian Vale
++
++- **Age:** 16. Fourth son of Baron Edric Vale.
++- **Power:** unmatched, free, total, remote.
++- **Temperament:** warm, dry, amused, decisive, thoroughly human. He is genuinely liked and genuinely likes people, and it costs him nothing to be kind because nothing is at stake in being kind.
++- **The mask:** a chosen game. He is the easy fourth son because that is the life he wants, not a cover for the life he has. Being underestimated is a pleasure.
++- **Goal:** to make the eastern marches the safest, richest, most beautiful territory in the world. Stated reason: so his family never again waits on a king's permission to be safe. Actual reason: see *the exile*.
++- **Method:** proactive and unhurried. He gathers, waits, lets people reveal themselves, then decides. Delay is strategy or amusement, never fear.
++- **Flaw:** none in the usual sense, and the story should never fake one. His problem is not character but consequence: every problem he solves teaches the world that it does not need to solve its own.
++
++He is not a psychopath and not a saint. He feels affection, irritation, curiosity, desire, satisfaction. He can be cold, and when he is cold it is total.
++
++---
++
++## The eastern marches
++
++Old country. Fought over for centuries, owned by nobody for long. Poor soil, good timber, three roads worth having and one river crossing worth dying for.
++
++**The Keeping:** a folk custom, not an order. Every village in the marches keeps something — a standing stone, a walled garden with nothing in it, a fire that is always lit at the boundary. Nobody remembers why. There is no organization, no lineage of guardians, no secret handshake. It is simply what people here have always done, the way people elsewhere paint their doors a particular blue.
++
++The Keeping is **texture, not structure**. It gives the marches age and atmosphere at zero backstory obligation, and it is the opposite of what the Hollow is: the Keeping is old and empty, the Hollow is new and awake.
++
++**The boundary marks** (optional, low priority): some of the stones the Keeping maintains are older than the custom, and Casian can feel them through the Current. They are not his. He does not know what they are. If the series ever answers this, the answer should be small and sad rather than grand — something that was here before, and stopped. Never a plot engine. Never about Casian.
++
++**Varenthos is a different world, not a post-collapse Earth.** Nothing here is a degraded version of the lost world. Do not let the two rhyme.
++
++---
++
++## The Hollow
++
++**The Hollow is his.** He builds it, in volume 1, out of nothing and nobody: a miller's widow who reads ledgers, a fence who knows every debt on the eastern road, an upland girl who can walk a county in the dark, his father's armsman who has been waiting thirty years for someone to ask him to do more than guard a gate.
++
++It is not inherited. It is not ancient. There is no predecessor and nothing to investigate. He makes it, one person at a time, and it is the best pleasure of his life.
++
++**It must never read as primitive, scrappy, or weak.** This is the single biggest failure of the previous drafts: an organization nobody fears, staffed by people who felt like helpers. The Hollow is not a plucky resistance. It is the quietest and most frightening thing in the eastern half of the world, and that reputation is **earned in front of the reader, then spent**.
++
++### How it earns fear
++
++**It is built on absence.** The Hollow does not post guards, does not parade, does not take credit, does not leave bodies, and does not negotiate. Its entire method is that a thing which was there is not there any more, and nobody saw it happen. A rival can fight an army. He cannot fight a road that is simply closed.
++
++**It never loses in front of the reader.** Where the Hollow appears to lose, it is always Casian allowing a loss — as bait, as cover, as a way to see who comes to collect. The reveal that a setback was chosen is a payoff, not a rescue.
++
++**The fear is shown from inside enemy heads.** Every volume must contain at least one enemy-POV passage where a competent man tries to reason about the Hollow and fails — not because he is stupid, but because the evidence does not support any conclusion available to him. He ends up believing something wrong, and acting on it.
++
++**The name is theirs, not his.** Casian never calls it the Hollow. He never names it at all. The marches name it, because when it takes something away it leaves a hollow behind: a house with the door open and the fire still burning and no one in it, a ford the whole county used last year and does not use now, a room where six men were and then were not.
++
++### How its reputation escalates
++
++| Vol | What people say about it | Who is afraid |
++|---|---|---|
++| 1 | "The Vales have a curse on their land. Old luck, bad luck, depends who you ask." | A warlord's captains. Quietly. They do not say it to Hask. |
++| 2 | "There is something in the east that doesn't want the Word. Fourteen of the Warden's men put down their cloaks and walked away, and none of them will say why." | The Ash's eastern circuit. A bishop asks for a transfer. |
++| 3 | "There is a power in the marches that takes armies and leaves the road." | Everyone. It is now the reason ambitious men choose another direction. |
++| 4 | "You cannot buy the east, and you cannot fight it, and I have stopped trying to work out which is worse." | The capital. Lucan's whole failure is that he treats a reputation as a price. |
++| 5 | "The Hollow is why no one marches east. That is the entire answer and it is not a secret any more." | The world. And the fear has to become legitimacy, which is harder. |
++
++**The trap to avoid:** a feared organization makes the dependency engine worse, not better, and the series must say so. A thousand villagers who believe an invisible power will handle it are a thousand people who have stopped handling things. Every increment of Hollow reputation must be paid for, visibly, in someone's initiative dying.
++
++---
++
++## The dependency engine
++
++This is the spine of the series. Every volume must advance it.
++
++Casian's stated project is a marches that never again needs permission from a king, a church, or an army. His method is to solve every problem himself.
++
++Therefore every enemy he erases leaves behind people who have learned they do not have to handle the next one. Volume by volume the marches become safer and more dependent, until he is the single point of failure in the exact structure he built to eliminate single points of failure.
++
++He is intelligent enough to see it. He is fond enough of these people not to stop.
++
++**He wants to build a place that does not need a god. The only tool he has is being one.**
++
++Consequences for the writing:
++
++- **Antagonists are interruptions, not the engine.** They are the world's demands on his time. A rotating cast is fine because they were never the point. What varies between volumes is not the size of the enemy but *what the enemy interrupts*.
++- **Escalation is dependency, counted in people.** Track it concretely: in volume 1, perhaps forty people can't do something without him. By volume 5, a world. Show the number rising in scenes, not in summary.
++- **The romance lanes test the thesis.** Each relationship is a different answer to "how does this place stop needing him." See below.
++- **The ending is redundancy.** He wins by building something that works when he is gone, then going back to the garden and being unnecessary. He stops being a god in a garden and becomes a man in one.
++
++---
++
++## The Council Beat
++
++**Mandatory. Once per volume minimum, twice preferred.** This is the series' signature set piece and the fix for the structural flaw of every previous draft.
++
++**The flaw:** the old versions only ever showed the men Casian was *dealing with* — captains, wardens, lieutenants, agents. The actual leadership was described as distant weather. So the reader met the middle of the ladder, watched it be removed, and was told the top existed somewhere. That is why the antagonists never felt like people and why the payoff never landed: you cannot be awed by the defeat of someone the reader has never been in a room with.
++
++**The rule:** *no enemy may be removed until their actual leadership has appeared on the page, in session, deciding.* Not mentioned. Not reported. In a room, arguing, with their own reasons, being competent.
++
++**The set piece:** that room, and Casian in it, unnoticed.
++
++He is not hiding in the sense of fear — he is doing it because it is the best seat in the house and it is funny. He uses the Current to be overlooked the way another man uses a good coat. He sits in a corner, or carries a jug, or stands at the back where servants stand, and listens to the men who ordered the burning decide what to burn next.
++
++Then, when he has heard enough — or when one of them says something about his family — he speaks.
++
++**How the beat is staged:**
++1. **The room is competent.** They are not fools, they are not blustering, and their plan is a good one. This is the most important part. The scene must establish that these people deserve to be feared before it establishes that they were never the threat.
++2. **He is genuinely unnoticed.** Play it straight. No near-miss, no tense moment of almost-discovery. The pleasure is that it works.
++3. **He speaks once.** Not a speech. A sentence, a correction, an answer to a question they did not know they had asked.
++4. **They realize in stages**, and the stages are the payoff: confusion, then reassessment, then the specific and personal terror of a man recalculating his entire life in public.
++5. **He is not cruel and he is not triumphant.** He passes the bread. He is enjoying himself and does not hide it, and that is worse.
++
++**Escalation of the beat:**
++
++| Vol | The room | How he is unnoticed | The realization |
++|---|---|---|---|
++| 1 | Hask's war council in Osric's hall | Taken for a servant. Pours. | One captain understands. He is not believed. He is the only man in the volume who survives. |
++| 2 | The Ash's chapter house, the eastern writ being decided | Written into the room as a clerk's boy | They know a hidden power exists and are hunting it. He gives them a suggestion. They thank him. The suggestion is the trap. |
++| 3 | Ilse's council | He walks in plainly and sits down | **She sees him before he speaks** and keeps talking anyway, because she already knows what he is and it changes nothing. The first time the beat inverts. |
++| 4 | The court | He is a guest, announced | Everyone knows exactly who he is, and it helps them none. The terror is social, not physical. |
++| 5 | The Conclave | — | He is not in the corner. He is in the chair. The beat cannot be repeated; it becomes the world sitting in his room. |
++
++**Failure modes to avoid:** a council of idiots; a council that exists only to be overheard giving exposition; Casian gloating; a near-discovery for tension; the beat used twice in a volume with the same staging.
++
++---
++
++## Romance
++
++**One lane. Seraine Varyn. That is the whole of it.**
++
++She is the legitimate answer to his whole project: make the marches safe by *law* instead of by Casian. A charter, a recognized position, a structure that outlives him. She is not a romantic obstacle and not a prize — she is a philosophical option, and the most tempting one, because taking her hand means becoming public, permanent, and known.
++
++She is nineteen when the story starts and twenty-four when it ends. She is three years older than him and stays three years older. She sees that he is impossible and has the discipline not to force a truth she cannot carry.
++
++**She must never be reduced to a love interest.** Her own assessment of what the east needs is often correct, and in volume 4 it is more correct than his. She is allowed to win arguments.
++
++**Vesna and Sabeth are not romance lanes.** They are something more useful:
++
++- **Vesna** is the counter-evidence. She becomes formidable *because* she works beside him, and she is the living proof that his exit is possible — that people he touches can become people who do not need him. She never worships him, never becomes an audience, and never needs him. If she ever becomes dependent, the series has failed.
++- **Sabeth** is the question. She is the only person who asks him plainly whether he wants to be unnecessary or whether he wants to be needed, and refuses the charming answer. She has her own project and her own loyalties, never becomes dependent, and never softens into an ally who was on his side all along.
++
++Neither is a consolation prize and neither is waiting. Both have full lives that the story follows on their own terms.
++
++
++---
++
++## Knowledge locks
++
++| Who | What they may know |
++|---|---|
++| The reader | Everything, through Casian's private thought and Argius's voice. |
++| Casian + Argius | The old world, the crossing, the whole of it. They never speak it aloud. |
++| Family | A beloved son and brother with an odd gift for making things work. Nothing more. |
++| Vesna | Casian is far more capable than he shows, and the boundary marks respond to him. No explanation. |
++| Sabine, Corin, the people he recruits | He is the reason things get done. Their loyalty is to the results and, eventually, to him. |
++| Seraine | He is impossible, and she has no proof and no theory that survives contact with the evidence. |
++| Sabeth | Something is operating in the marches. She never cleanly identifies it as a boy. |
++| The Ash | A hidden power or an old horror in the east. They never solve the identity. |
++| Everyone | **No one learns the exile. Ever. Not in five volumes.** |
++
++---
++
++## Names and ages
++
++`canon/characters.json` is the only source of truth for names and ages. It generates `canon/roster.txt` and `canon/ages.md` via `tools/age_ledger.py`. **Never write an age from memory** — the previous drafts drifted on every character because ages lived in prose and in volume notes, and nothing recomputed them when the calendar moved.
++
++Every chapter frontmatter carries `year:`, and `tools/age_ledger.py --check-year` will flag a stated age that contradicts the table.
++
++The drift traps are Emric (an infant who becomes a small boy), Elna (twelve to seventeen — her voice must change), and Casian (sixteen to twenty-one — a twenty-one-year-old playing the overlooked fourth son is a different performance from a sixteen-year-old doing it).
++
++---
++
++## The Ash
++
++The Church of the Ashen Word. Not a cartoon inquisition — a real institution with legitimacy, revenue, a bureaucracy, a doctrine, and a genuine reason to exist. It burns people for claiming other lives, which means it burns people for saying a fraction of a true thing Casian cannot say.
++
++That is why volume 2 matters to him personally and why he can never explain it. He cannot avenge a heresy trial without admitting he is a heretic.
++
++Its fear of the eastern marches is old and mostly correct: something *is* out here, and it is not friendly to being looked at.
++
++---
++
++## Style
++
++- **Warm, confident, unhurried.** This is a story about a man who is having a good time and is very good at it.
++- **Let villains have teeth, then let their certainty turn to terror.** The reversal should be clean and memorable and usually witnessed.
++- **His big actions are quiet and visible only in aftermath.** A road is closed. A contingent does not arrive. Three hundred men are simply not there in the morning.
++- **Family scenes are the point, not the relief.** They are why anything matters.
++- **No modern register outside Casian's private thought and Argius's voice.** No systems, no data, no efficiency, no protocol. Argius may be precise in a way that sounds anachronistic; the narration may not.
++- **Never frame the mask as hiding.** He is not a god pretending to be a boy. He is a boy who happens to be a god, and he is fine.
++
++---
++
++## The one-sentence test for every scene
++
++Does this show him taking more of the world, or show the world needing him more, or show him unable to stop? If none of those, cut it.
+diff --git a/reboot/canon/characters.json b/reboot/canon/characters.json
+new file mode 100644
+index 0000000..42d94c5
+--- /dev/null
++++ b/reboot/canon/characters.json
+@@ -0,0 +1,61 @@
++{
++  "_comment": "SINGLE SOURCE OF TRUTH for names, ages, and the story calendar. roster.txt and ages.md are GENERATED from this file by tools/age_ledger.py. Never hand-edit a generated file. To add a character, add them here and re-run the tool.",
++
++  "calendar": {
++    "note": "Absolute years. Every chapter frontmatter must carry a `year:` matching one of these volumes.",
++    "volumes": [
++      { "id": "volume_01", "title": "The Gardener", "year": 1217, "span": "summer – autumn" },
++      { "id": "volume_02", "title": "The Ash", "year": 1218, "span": "spring – autumn" },
++      { "id": "volume_03", "title": "The Peer", "year": 1219, "span": "winter 1219 – winter 1220" },
++      { "id": "volume_04", "title": "The Court", "year": 1221, "span": "spring – summer" },
++      { "id": "volume_05", "title": "The Gate", "year": 1222, "span": "spring – autumn" }
++    ]
++  },
++
++  "characters": [
++    { "name": "Casian",  "birth": 1201, "group": "vale",     "role": "protagonist, fourth son", "note": "Unmatched Current-user. The easy brother by choice." },
++    { "name": "Edric",   "birth": 1168, "group": "vale",     "role": "father, Baron of Vale", "note": "Good lord, good father, sees an ordinary son." },
++    { "name": "Maren",   "birth": 1172, "group": "vale",     "role": "mother", "note": "Knows something is different and has decided not to make it a thing." },
++    { "name": "Oswin",   "birth": 1146, "group": "vale",     "role": "paternal grandmother", "note": "Sharp, old, suspects plenty, says little." },
++    { "name": "Aldric",  "birth": 1193, "group": "vale",     "role": "eldest brother, heir", "note": "Married to Rowan. Steady." },
++    { "name": "Rowan",   "birth": 1194, "group": "vale",     "role": "Aldric's wife", "note": "" },
++    { "name": "Emric",   "birth": 1216, "group": "vale",     "role": "Aldric's son", "note": "An infant in Vol 1. Ages fastest of anyone — check the table every volume." },
++    { "name": "Gareth",  "birth": 1196, "group": "vale",     "role": "second brother", "note": "The sword." },
++    { "name": "Brennan", "birth": 1199, "group": "vale",     "role": "third brother", "note": "The charm." },
++    { "name": "Elna",    "birth": 1205, "group": "vale",     "role": "sister", "note": "His soft spot. Not a hostage. Never a hostage." },
++    { "name": "Argius",  "birth": null, "group": "other",    "role": "damaged interface fragment", "note": "Not born. Ageless. The only one who remembers." },
++
++    { "name": "Vesna",   "birth": 1198, "group": "hollow",   "role": "uplander, 19 in Vol 1; field partner", "note": "Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane." },
++    { "name": "Corin",   "birth": 1182, "group": "hollow",   "role": "Vale armsman turned field-master", "note": "Runs the unglamorous operations." },
++    { "name": "Maeve",   "birth": 1177, "group": "hollow",   "role": "the miller's widow; intelligence", "note": "Reads ledgers better than anyone alive." },
++    { "name": "Jory",    "birth": 1179, "group": "hollow",   "role": "Vale guard captain", "note": "Loyal to the baron, slowly to something else." },
++    { "name": "Kael",    "birth": 1195, "group": "hollow",   "role": "upland scout lieutenant", "note": "" },
++    { "name": "Ansel",   "birth": 1157, "group": "hollow",   "role": "the fence at Harrowmere", "note": "Knows every debt on the eastern road." },
++    { "name": "Aldous",  "birth": 1167, "group": "hollow",   "role": "surgeon-apothecary at Vale", "note": "The first man Casian cannot save fast enough." },
++    { "name": "Calla",   "birth": 1187, "group": "hollow",   "role": "Baroness of Fenwick, widow", "note": "Competent. Watching the Vale barony change." },
++
++    { "name": "Seraine", "birth": 1198, "group": "romance",  "role": "Lady Seraine Varyn", "note": "THE romance lane. The legitimate answer: make the east safe by law, not by Casian. Must never be reduced to a love interest — her own assessment is often correct." },
++
++    { "name": "Sabeth",  "birth": 1191, "group": "wild",     "role": "outsider with her own project", "note": "THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along." },
++
++    { "name": "Hask Veyr","birth": 1173, "group": "v1_foe",  "role": "warlord of the eastern hills", "note": "Cruel, patient, genuinely dangerous.", "dies": 1217 },
++    { "name": "Osric",   "birth": 1162, "group": "v1_foe",   "role": "Baron of Thornwall", "note": "Funds Hask quietly. Mistakes sentiment for weakness.", "dies": 1217 },
++
++    { "name": "Selwyn",  "birth": 1165, "group": "ash",      "role": "Warden of the Ashen Word, eastern circuit", "note": "Bureaucrat, believer, not a monster. Survives the series and is never converted." },
++    { "name": "Vaunt",   "birth": 1170, "group": "ash",      "role": "Inquisitor of the eastern writ", "note": "Competent, and learns too much. Lives." },
++    { "name": "Ferrand", "birth": 1179, "group": "ash",      "role": "Ash captain, field commander", "note": "Cruel. Does not survive the year.", "dies": 1218 },
++    { "name": "Lennah",  "birth": 1157, "group": "ash",      "role": "hedge-healer of Ashgrove", "note": "Burned. The reason Casian can never speak. Do not reuse the name.", "dies": 1218 },
++
++    { "name": "Ilse",    "birth": 1185, "group": "v3_foe",   "role": "forced the Current; dying of it", "note": "The mirror. Wants what Casian wants. Two years left at first meeting.", "dies": 1220 },
++    { "name": "Halden",  "birth": 1177, "group": "v3_foe",   "role": "Ilse's lieutenant", "note": "Loyal, unsentimental. Survives her." },
++    { "name": "Tace",    "birth": 1205, "group": "v3_foe",   "role": "14 in Vol 3; one of Ilse's people", "note": "The reason her project looks the way it does." },
++
++    { "name": "Lucan",   "birth": 1191, "group": "v4_foe",   "role": "Duke of Redmere", "note": "Elegant, competitive. Thinks every house has a price. Not erased. Lives." },
++    { "name": "Caedmon", "birth": 1163, "group": "crown",    "role": "Royal Chancellor", "note": "Observant, dry, loyal to the Crown rather than any faction." },
++    { "name": "Orlan",   "birth": 1171, "group": "crown",    "role": "Royal Marshal", "note": "Blunt soldier. Thinks the eastern Compact must be measured." },
++
++    { "name": "Severin", "birth": 1188, "group": "v5_foe",   "role": "the betrayer", "note": "Placeholder — confirm before volume 5 planning." },
++    { "name": "Ivara",   "birth": 1180, "group": "v5_foe",   "role": "foreign power", "note": "Placeholder." },
++    { "name": "Tarek",   "birth": 1175, "group": "v5_foe",   "role": "coalition commander", "note": "Placeholder." }
++  ]
++}
+diff --git a/reboot/canon/constitution.md b/reboot/canon/constitution.md
+new file mode 100644
+index 0000000..051b15f
+--- /dev/null
++++ b/reboot/canon/constitution.md
+@@ -0,0 +1,130 @@
++# Writer's Constitution — *A God in the Garden* (reboot)
++> **Law, not reference.** Where this conflicts with the bible, the bible wins on facts and this wins on method.
++> Version 1.0
++
++---
++
++## The four unbreakables
++
++**1. Casian is never threatened.**
++Unmatched power, zero cost. No fear, no strain, no exhaustion, no moral debt, no near-miss, no wound, no plan that could fail. He is never rescued, never cornered, never forced to react. If a draft contains a moment where the reader wonders whether he will be all right, delete the moment.
++
++*Grief is not a violation of this rule.* He carries a lost world. He does not flinch, brood, hesitate, or doubt his power. He is a man with an absence in him who has decided to be happy anyway.
++
++**2. The mask is chosen and he enjoys it.**
++He is the easy fourth son because it is a good life and a fun game. Never write it as disguise, survival, camouflage-for-the-vulnerable, or a burden he longs to shed. He is not trapped by it. He could stop at any time and does not want to.
++
++**3. Nobody ever learns about the old world.**
++Not in volume 1, not in volume 5, not on the last page. No character guesses correctly, no record is found, no dying declaration. Casian does not speak it aloud, even alone — only Argius hears it, and Argius already knows. The reader learns it through his private thought. It stays unsaid and it changes everything he does.
++
++**4. Escalation is dependency, not opposition.**
++Every volume must make the marches safer and more reliant on him. A bigger enemy is not escalation. A world that can no longer function without him is. Count it in people: who, concretely, cannot do something now that they could have done before?
++
++---
++
++## Structure rules
++
++**5. Every volume is a different *kind* of story.**
++Volume 1 is intimate. 2 is institutional. 3 is a peer. 4 is social. 5 is foundational. No volume may be another volume with a new antagonist — the single failure mode of the previous draft. Before planning any volume, name in one sentence what kind of story it is and confirm it does not appear earlier in the list.
++
++**6. Antagonists are interruptions.**
++They are the world's demands on his time, not the engine of the series. Give them teeth, give them real danger to *his people*, let them expose their networks, then remove them in a way the survivors will describe as a curse. What varies volume to volume is what they interrupt — a family, a town, a project, a relationship, a peace.
++
++**7. From volume 3 onward, erasure must be available and must be a loss.**
++A protagonist who cannot be beaten is only interesting when winning would cost him something he values. The peer, the court, the world: these are opponents where the question is not "can he remove them" but "what does removing them make him." Not because they are stronger. Because they are right, or loved, or necessary, or doing his own work for reasons he respects.
++
++**8. The garden is the ending, not the reward.**
++The last movement is not a victory. It is him building something that works when he is gone, and then being unnecessary, and liking it. He stops being a god in a garden and becomes a man in one.
++
++**9. The top of the ladder is always on the page.**
++No enemy may be removed until their actual leadership has appeared in a room, in session, deciding something, with their own reasons. Never the men Casian is dealing with while the real power stays offstage as weather. If the reader has only met captains and agents, the volume is broken — the payoff of removing someone is proportional to how well the reader knows them.
++
++Every volume must also include **at least one enemy-POV passage** in which a competent person reasons about the Hollow and arrives at the wrong answer.
++
++**10. The Council Beat is mandatory.**
++Once per volume minimum. The enemy's leadership in session; Casian present, actively overlooked through the Current, enjoying himself; then he speaks once. Staged as follows and never shortcut:
++
++- The room is competent. Establish that they deserve to be feared *before* establishing that they were never the threat.
++- He is genuinely unnoticed. No near-miss, no almost-caught. Play it straight.
++- He says one sentence, not a speech, and it is usually an answer to a question they did not know they had asked.
++- They realize in stages, and the stages are the payoff: confusion, reassessment, then the personal terror of a man recalculating his life in public.
++- He is neither cruel nor triumphant. He is having a good time and does not hide it, which is worse.
++
++See the escalation table in `bible.md`. Never use the same staging twice in one volume.
++
++**11. The Hollow is feared, not scrappy.**
++It is not a plucky resistance, not a band of helpers, and not primitive. It is the quietest and most frightening thing in the eastern half of the world, and its reputation is earned in front of the reader before it is spent. Its method is absence: it posts no guards, parades nothing, takes no credit, leaves no bodies, and never negotiates.
++
++Where the Hollow appears to lose, Casian allowed it — as bait, as cover, or to see who comes to collect. Never let it lose because it was outmatched.
++
++And every increment of its reputation must be paid for visibly, in someone's initiative dying. A thousand villagers who believe an invisible power will handle it are a thousand people who have stopped handling things. That is the engine, not a side effect.
++
++**12. Ages and names come from the ledger.**
++`canon/characters.json` → `canon/roster.txt` + `canon/ages.md`, generated by `tools/age_ledger.py`. Never write an age from memory and never spell a roster name from memory. Every chapter frontmatter carries `year:`. If the ledger and the draft disagree, the draft is wrong.
++
++---
++
++## The dependency ledger (new, and mandatory)
++
++Before drafting any volume, write down:
++- **Who currently cannot act without him.** Named people, roles, specific things that will now fail.
++- **Who he is about to make dependent in this volume.**
++- **Who, if anyone, becomes less dependent.** These should be rare, hard-won, and always earned by a specific person rather than a general improvement.
++
++Vesna is the standing counter-example. If she ever becomes dependent on him, something has gone wrong with the series.
++
++---
++
++## Voice and register
++
++**13. Argius is dry.** Terse military precision with occasional flat humour. Not cold, not warm, not chirpy, not a grief counsellor, not a search engine. It never explains the world, never recaps, and never volunteers backstory. Its best lines are two words long. It is the only company Casian has in the only thing that matters, and it never says so.
++
++**14. No modern register outside Casian's private thought and Argius's voice.**
++Banned in narration and dialogue: efficiency, optimize, system, network, data, metric, probability, logistics, protocol, engineering, company (as a business), percent, software, algorithm, database, computer, technology, interface, process, capacity, bandwidth.
++
++Argius may be precisely anachronistic. The narrator may not. Outsiders say: sorcery, witchcraft, curse, an old horror, the thing in the hills.
++
++**15. Do not let the lost world rhyme with Varenthos.**
++It is not Earth. Do not name it. Do not let Casian compare things to it out loud, and use the comparison in private thought rarely enough that it still lands. There are no ruins of it here, no technology to reinvent, no songs that survived. It is a hole, not a clue.
++
++**16. The Keeping is custom, not conspiracy.**
++No secret order, no ancient guardians, no inherited machine that obeys him. The boundary stones are old and nobody knows why. If the series ever answers that question, the answer is small and sad and has nothing to do with Casian.
++
++---
++
++## Scene test
++
++Every scene must do at least one of:
++
++- Show him **taking** something (territory, knowledge, loyalty, a debt, a road).
++- Show the **world needing him** more than it did before.
++- Show the **mask as pleasure**, not pressure.
++- Show **family warmth** that establishes what all of this is for.
++- Show a **real reversal** — condescension becoming terror, witnessed.
++
++Cut scenes whose only function is logistics, anxious management, procedural negotiation, or investigating old history.
++
++**At least two unmistakable aura payoffs per act**, and no more than three that are the same *kind* of payoff. If three erasures in a row all look like "they vanished and nobody knows how," you have spent an entire volume saying one thing.
++
++---
++
++## Character locks
++
++- **Ages are fixed** by `roster.txt`. Do not drift them.
++- **Edric** is a good baron and a good father who sees an ordinary son, and is not a fool. His blindness is the blindness of a man with four sons and a border to hold.
++- **Maren** is the emotional centre. She knows something is different about him and has decided, deliberately and privately, not to make it a thing. That decision is real and never stated aloud.
++- **Elna** is his soft spot and not a hostage. Never use her as leverage for tension; use her to show what he is protecting.
++- **Oswin** is sharp and old and suspects more than she says, and never says enough to break rule 3.
++- **Seraine is the only romance lane.** She must never be reduced to a love interest: her own assessment of what the marches need is often correct, and in volume 4 more correct than his. She is allowed to win arguments. The three-year age gap stays constant.
++- **Vesna is not a romance lane.** She is the counter-evidence to dependency — someone who became formidable by working and does not need him. She never worships him, never becomes an audience, is never competing for him, and is never the one who asks the question that solves the backstory. If she ever becomes dependent on him, the series has failed.
++- **Sabeth is not a romance lane.** She is the question: the one person who asks whether he wants to be unnecessary or whether he wants to be needed, and refuses the charming answer. She never becomes dependent and never softens into an ally who was on his side all along. Her life is followed on its own terms.
++
++## Ages
++
++Every chapter frontmatter carries `year:`. Ages are read from `canon/ages.md`, never invented. The three that drift if unwatched: **Emric** (infant → small boy), **Elna** (12 → 17, and her voice must change with it), **Casian** (16 → 21, and a twenty-one-year-old playing the overlooked fourth son is a different performance from a sixteen-year-old doing it).
++
++---
++
++## Length
++
++Chapter target: **3,000–4,500 words.** Long enough for real scenes, short enough to keep a serial pace. A chapter that reads as a plot summary is a failure regardless of length.
+diff --git a/reboot/canon/roster.txt b/reboot/canon/roster.txt
+new file mode 100644
+index 0000000..acecf8a
+--- /dev/null
++++ b/reboot/canon/roster.txt
+@@ -0,0 +1,64 @@
++# Canonical names — Master Roster
++# GENERATED from canon/characters.json by tools/age_ledger.py. Do not edit by hand.
++# Ages shown are as of volume_01 (1217). See canon/ages.md for every volume.
++# Any name in chapter frontmatter `characters:` must appear here, spelled exactly.
++
++# — The Vale household —
++Emric    # born 1216, age 1 · Aldric's son. An infant in Vol 1. Ages fastest of anyone — check the table every volume.
++Elna     # born 1205, age 12 · sister. His soft spot. Not a hostage. Never a hostage.
++Casian   # born 1201, age 16 · protagonist, fourth son. Unmatched Current-user. The easy brother by choice.
++Brennan  # born 1199, age 18 · third brother. The charm.
++Gareth   # born 1196, age 21 · second brother. The sword.
++Rowan    # born 1194, age 23 · Aldric's wife
++Aldric   # born 1193, age 24 · eldest brother, heir. Married to Rowan. Steady.
++Maren    # born 1172, age 45 · mother. Knows something is different and has decided not to make it a thing.
++Edric    # born 1168, age 49 · father, Baron of Vale. Good lord, good father, sees an ordinary son.
++Oswin    # born 1146, age 71 · paternal grandmother. Sharp, old, suspects plenty, says little.
++
++# — Argius —
++Argius  # ageless · damaged interface fragment. Not born. Ageless. The only one who remembers.
++
++# — The Hollow — built by Casian, not inherited —
++Vesna   # born 1198, age 19 · uplander, 19 in Vol 1; field partner. Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane.
++Kael    # born 1195, age 22 · upland scout lieutenant
++Calla   # born 1187, age 30 · Baroness of Fenwick, widow. Competent. Watching the Vale barony change.
++Corin   # born 1182, age 35 · Vale armsman turned field-master. Runs the unglamorous operations.
++Jory    # born 1179, age 38 · Vale guard captain. Loyal to the baron, slowly to something else.
++Maeve   # born 1177, age 40 · the miller's widow; intelligence. Reads ledgers better than anyone alive.
++Aldous  # born 1167, age 50 · surgeon-apothecary at Vale. The first man Casian cannot save fast enough.
++Ansel   # born 1157, age 60 · the fence at Harrowmere. Knows every debt on the eastern road.
++
++# — Romance —
++Seraine  # born 1198, age 19 · Lady Seraine Varyn. THE romance lane. The legitimate answer: make the east safe by law, not by Casian. Must never be reduced to a love interest — her own assessment is often correct.
++
++# — Unaffiliated —
++Sabeth  # born 1191, age 26 · outsider with her own project. THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along.
++
++# — Volume 1 — antagonists —
++Hask Veyr  # born 1173, age 44 · warlord of the eastern hills — dies 1217. Cruel, patient, genuinely dangerous.
++Osric      # born 1162, age 55 · Baron of Thornwall — dies 1217. Funds Hask quietly. Mistakes sentiment for weakness.
++
++# — The Ash — volume 2 —
++Ferrand  # born 1179, age 38 · Ash captain, field commander — dies 1218. Cruel. Does not survive the year.
++Vaunt    # born 1170, age 47 · Inquisitor of the eastern writ. Competent, and learns too much. Lives.
++Selwyn   # born 1165, age 52 · Warden of the Ashen Word, eastern circuit. Bureaucrat, believer, not a monster. Survives the series and is never converted.
++Lennah   # born 1157, age 60 · hedge-healer of Ashgrove — dies 1218. Burned. The reason Casian can never speak. Do not reuse the name.
++
++# — Volume 3 —
++Tace    # born 1205, age 12 · 14 in Vol 3; one of Ilse's people. The reason her project looks the way it does.
++Ilse    # born 1185, age 32 · forced the Current; dying of it — dies 1220. The mirror. Wants what Casian wants. Two years left at first meeting.
++Halden  # born 1177, age 40 · Ilse's lieutenant. Loyal, unsentimental. Survives her.
++
++# — The Court — volume 4 —
++Lucan  # born 1191, age 26 · Duke of Redmere. Elegant, competitive. Thinks every house has a price. Not erased. Lives.
++
++# — The Crown — volume 4 —
++Orlan    # born 1171, age 46 · Royal Marshal. Blunt soldier. Thinks the eastern Compact must be measured.
++Caedmon  # born 1163, age 54 · Royal Chancellor. Observant, dry, loyal to the Crown rather than any faction.
++
++# — Volume 5 (placeholders — confirm before planning) —
++Severin  # born 1188, age 29 · the betrayer. Placeholder — confirm before volume 5 planning.
++Ivara    # born 1180, age 37 · foreign power. Placeholder.
++Tarek    # born 1175, age 42 · coalition commander. Placeholder.
++
++# Names appearing in more than one group, or in no group, are an error.
+diff --git a/reboot/canon/series_arc.md b/reboot/canon/series_arc.md
+new file mode 100644
+index 0000000..8bccd2f
+--- /dev/null
++++ b/reboot/canon/series_arc.md
+@@ -0,0 +1,141 @@
++# Series Arc — *A God in the Garden* (reboot)
++> Five volumes. Each a different *kind* of story. Each escalating dependency, not opposition.
++
++---
++
++## The shape of the whole thing
++
++Casian Vale is sixteen, the fourth son, and the most dangerous thing alive. He has lost a world he cannot name and is building a new one in the eastern marches — a place worth living in, made by someone who watched a place stop existing.
++
++The series is not about whether he wins. He wins every time. The series is about what winning does to the only life he actually wanted.
++
++**Act shape across five volumes:**
++
++- **I–II:** He builds. The world pushes back. He removes the obstruction. It works.
++- **III:** He meets someone whose project he cannot simply remove, and the first real argument of the series happens — with himself.
++- **IV:** The world offers him the clean answer: become official, become permanent, stop being needed *personally* by becoming needed *structurally*. It is the correct answer, and it is the one thing he does not want.
++- **V:** He solves dependency the only way it can be solved — by making himself unnecessary — and then goes back to the garden.
++
++---
++
++## Volume 1 — *The Gardener*
++
++**Kind of story:** intimate. A family, a border, a cruel man.
++**Interrupts:** ordinary life.
++
++A warlord named Hask Veyr and the baron who funds him look at the eastern marches and see neglected land and a sentimental house they can squeeze. They are wrong, and Casian lets them be wrong for a long time, because letting a man show you every friend he has is faster than asking.
++
++**What he builds:** his own network, from nothing. A miller, a fence, a clerk, a girl from the uplands who turns out to be better at this than he is. No inherited order, no ancient machine. By the end of the volume there are perhaps forty people in the marches whose problems are now his, and he has arranged it himself, deliberately, one at a time, and enjoyed it.
++
++**What he gives up:** nothing he can name yet. He thinks he is simply solving a problem.
++
++**The Council Beat (mid-volume):** Hask's war council in Osric's hall. Casian is taken for a servant and pours wine for the men who ordered the burning while they decide what to burn next. One captain understands what has been in the room. He is not believed, and he is the only man in the volume who survives.
++
++**The Hollow:** built here, from nothing, one person at a time — Maeve, Ansel, Vesna, Corin. Small, quiet, and already frightening, because it does not leave anything behind. The marches start calling it a curse before it has a name.
++
++**Ending:** Hask and the baron are gone so thoroughly that the border calls it an old curse. The marches are safer than they have been in a century, and can no longer solve their own disputes, and Casian does not notice that the second sentence follows from the first.
++
++**Exile layer:** he plants a tree that will not fruit for forty years, and Argius remarks that he will be here for all of them. It is the first sign of a man building for a permanence he does not expect to share.
++
++---
++
++## Volume 2 — *The Ash*
++
++**Kind of story:** institutional. A legitimate power with a bureaucracy and a doctrine.
++**Interrupts:** the peace he just made.
++
++The Church of the Ashen Word comes east. Not a mob — an apparatus. A writ, a Warden, a bureaucracy, a budget, and a sincerely held belief that the marches are hiding an old horror, which is unfortunately true.
++
++They burn people for claiming to have lived another life. Casian watches a hedge-healer die for a fraction of a true thing he can never say.
++
++**The problem he cannot punch:** he can erase a hundred men and the institution continues, because it is not a man. And he cannot avenge a heresy trial without admitting he is a heretic.
++
++**How he wins:** he does not defeat the Church. He makes it *cheap* to leave the marches alone — by finding what its eastern apparatus actually is (corrupt, funded, ambitious, and lying to its own Synod) and handing that to the people who would rather not know. The Church retreats not because it is beaten but because the marches become an unprofitable embarrassment.
++
++**Dependency rise:** every community he protects from the Ash now expects to be protected. He does not create a following. He creates a *constituency*.
++
++**What he gives up:** the possibility of ever being honestly known. If he had wanted to tell anyone, that door closes here.
++
++**The Council Beat:** the chapter house where the eastern writ is decided. Casian is written into the room as a clerk's boy. They know a hidden power exists and are hunting it. He offers a suggestion. They thank him for it. The suggestion is the trap.
++
++**The Hollow:** the Ash's eastern circuit starts losing men who simply put down their cloaks and walk away, and none of them will say why. A bishop asks for a transfer. This is more frightening to the institution than any defeat in the field.
++
++**Ending:** the Ash marks the east forbidden ground and teaches a wrong story about why. The world's fear of the marches is now official policy, and it is Casian's own fault, and he finds this funny in a way that does not reach his eyes.
++
++---
++
++## Volume 3 — *The Peer*
++
++**Kind of story:** a rival. Somebody else with power, and a reason.
++**Interrupts:** his certainty that he is the only one doing this.
++
++A woman named Ilse has forced the Current. Not inherited it, not been given it — forced it, the way you force a lock, and it is eating her alive. She knows. She has perhaps two years and she is spending them on a project: a road, a league, a small nation of people who will be safe from the kind of men who took her family.
++
++Her methods are monstrous. Her goal is Casian's. She is not lying about any of it.
++
++**The Council Beat, inverted:** Ilse's council. He walks in plainly and sits down. **She sees him before he speaks** and keeps talking anyway, because she already knows what he is and it changes nothing about what she intends to do. The first time the beat fails to work, and the failure is the point.
++
++**Why she is the hinge of the series:** she is the mirror. Her power costs everything and she pays it without complaint; his costs nothing and he has never once had to decide what it is for. She is going to die for something he does on a Tuesday afternoon.
++
++**And he can erase her.** Easily. That is the point. Doing it would prove her right about what he has become and would be the first real defeat of the series — a victory that costs him something he cannot get back.
++
++**How it resolves:** he does not remove her. He does something worse and kinder: he takes her project away from her by completing it properly, publicly, under his own name bar nobody can trace — and lets her die believing it worked. Or: she makes him choose, and one of them has to lose the thing they wanted. *(Decision deferred to volume 3 planning. Two defensible endings; pick one and commit.)*
++
++**Dependency rise:** the marches now hold a league, a road, and a treasury. Two hundred people, then a thousand, cannot act without him.
++
++**What he gives up:** the belief that his power is free because it costs *him* nothing.
++
++---
++
++## Volume 4 — *The Court*
++
++**Kind of story:** social. Wit, caper, masks, and an offer he cannot refuse cleanly.
++**Interrupts:** nothing. **He chooses this.** That is the point.
++
++Seraine has spent three volumes telling him the same thing: make it law. A royal charter would make the marches safe by statute instead of by Casian, and statutes outlive men. For the first time, the correct answer and the thing he wants are different, and he goes to the capital because it sounds like fun and because he is afraid of the answer.
++
++The capital expects a border baron and an irrelevant fourth son and gets a boy who plays a season of gossip, forgery, and ambition like a card game he has already won.
++
++**The Council Beat, social:** the room where Lucan's faction decides how to break the Vales. Casian is a guest, announced at the door, and everyone knows exactly who he is — and it helps them none at all. The terror is not physical. It is a room full of clever people realising that knowing the truth about him is worthless.
++
++**How he wins:** not by erasure. Duke Lucan is disgraced and contained and lives, and his failure is not defeat but incomprehension — he is a man who believes every house has a price, and he dies still unable to work out what Casian's was.
++
++**Dependency rise:** the marches become a chartered entity whose charter exists because Casian was amusing in a ballroom. A charter without him is a nice document. The east knows the difference.
++
++**What he gives up:** he accepts the charter. He also discovers he loves the game. He has taken the legitimate answer and made himself *more* central rather than less, and Seraine notices, and says so, and is right.
++
++---
++
++## Volume 5 — *The Gate*
++
++**Kind of story:** foundational. He sets the stage and the world answers.
++**Interrupts:** nothing external. He calls it.
++
++The Compact is large enough that powers who have never met him now have opinions about him. Casian does what he always does: he makes the choice before anyone can make it for him. He invites the world to Vale — not to be recognised, but to see, so that when the story is told it is not a story about a hidden horror in the hills.
++
++A betrayal makes the final movement necessary rather than chosen, but by then the board is his.
++
++**The Council Beat:** there isn't one. He is not in the corner any more. He is in the chair, and the beat becomes the world sitting in his room. Do not stage it again.
++
++**How it resolves:** the last enemy is not a person. It is the dependency he built. He spends the final movement deliberately making himself unnecessary — teaching, handing over, building structures with names on them that are not his, and accepting that this means letting people fail at things he could fix in a second. That is the hardest thing he does in five volumes and it costs him no strength at all.
++
++**Ending:** the world no longer needs a god. He goes home. The last chapter is a morning in the garden with roses and noise and an open gate, and he is not watching the road. He is a man in a garden. That is the whole title, resolved.
++
++**Romance endgame:** decided at volume 5 planning, not before. All three lanes must resolve on their own terms — including any that do not resolve with him.
++
++---
++
++## Standing rules across the arc
++
++- Casian is never threatened, never strained, never afraid.
++- Nobody learns the old world, at any point, ever.
++- Every volume makes the east safer and more dependent.
++- Every volume is a different kind of story.
++- Antagonists are interruptions. What they interrupt changes; the fact of interruption does not.
++- Volume 3 onward: erasure is available and would be a loss.
++- Argius remembers. Only Argius remembers.
++- Family is the reason, not the stakes.
++- The top of every enemy ladder appears on the page, in a room, deciding, before they are removed.
++- The Council Beat runs once per volume and never twice with the same staging.
++- The Hollow is feared from volume 1 and its reputation escalates; every increment is paid for in someone's initiative dying.
++- The end is a garden, and it is not a reward.
+diff --git a/reboot/notes_pre_reboot_review.md b/reboot/notes_pre_reboot_review.md
+new file mode 100644
+index 0000000..3ee9832
+--- /dev/null
++++ b/reboot/notes_pre_reboot_review.md
+@@ -0,0 +1,171 @@
++# Reading Notes — `isekai / a_god_in_the_garden`
++
++Reviewed at commit `fa778aa` ("Story base line", 2026-10-27). Nothing changed in the repo — this is read-only notes for discussion.
++
++---
++
++## What the folder actually is
++
++Not a code project. It's a **planning-and-continuity repo for a 6-volume OP power-fantasy web serial**, with a small tooling layer bolted on.
++
++```
++a_god_in_the_garden/
++  canon/            bible, constitution, series arc, roster, story state   ← the source of truth
++  volume_01..06/    outline.md (40 chapters each) + state_notes.md
++  README.md
++tools/              check_chapter.py (linter) + scrub_modern.py (rewriter)
++.agents/agents/     three LLM agent prompts: chapter-reviewer, prose_reviewer, prose_expander
++epub_generator/     Node EPUB builder (marked + epub-gen-memory), 16 MB of character art
++```
++
++**Premise.** Casian Vale, 16, fourth son of a border baron, is the reloaded consciousness of a strategic-class weapon from another world. Argius, its damaged military interface, lives in his head and gives him the Current (total, cost-free remote power). Centuries before his birth, the autonomous **First Watch** built the **Hollow** — a hidden territorial order that already owns the eastern marches. He doesn't hide out of fear; he likes the garden, likes being underestimated, and is quietly building a private kingdom in everything but name.
++
++The core design decision is a good one: **the power is not the story's problem.** There's no "can he win" tension anywhere. The stakes are entirely *what he chooses to take and who gets hurt before he decides*. `constitution.md` makes this explicit and enforceable.
++
++---
++
++## What's strong
++
++**1. The canon layer is unusually disciplined for a hobby project.** Five files with clean separation of concerns — *premise* (bible), *law* (constitution), *roadmap* (series arc), *facts* (roster), *cursor* (story state). Most projects at this stage have one sprawling worldbuilding doc. The knowledge-lock table in `bible.md` (who may know what, per character) is the single best artifact in the repo — it's the thing that stops a long serial from collapsing into people learning things they shouldn't.
++
++**2. `constitution.md` rule 5 and the "First Watch" framing.** You pre-empted the two standard failure modes of this genre: the backstory becoming a mystery-investigation that stalls the plot, and the ancient-power reveal cheapening the protagonist. "Seasoning, never the plot meal" is the right instruction and it's repeated where it needs to be.
++
++**3. Structural consistency.** All six outlines have exactly 40 chapters, no gaps, no duplicates. Act boundaries, epilogue placement, and the "one volume = one escalation of scale, not of threat" rule all hold across the 240-chapter span. That's real discipline.
++
++**4. The volume-4 pivot is the smartest single choice in the arc.** After three volumes where the answer is "he erases them," volume 4 replaces erasure with a *caper* and lets Lucan survive, disgraced. Then volume 5 replaces the antagonist with *choice* (he goes to sea because he wants to). That's how you keep an OP protagonist from becoming boring — you stop escalating power and start escalating the kind of game he plays. Volumes 4–6 read like they were designed by someone who noticed the problem in volumes 1–3.
++
++---
++
++## The problems, in priority order
++
++### 1. There are no chapters. None. Zero.
++
++`find . -name "ch_*.md"` returns nothing. There is no `chapters/` directory in any of the six volumes.
++
++But:
++
++- `volume_01/state_notes.md` → *"Next chapter: COMPLETE — Volume 1 v3 regenerated 40/40."*
++- `volume_02/state_notes.md` → *"COMPLETE — Volume 2 v3 regenerated 40/40."*
++- `volume_03/state_notes.md` → *"COMPLETE — Volume 3 v3 regenerated 40/40. **Series 120/120 complete per new canon.**"*
++- `bible.md` → *"Existing Volume 1–3 manuscripts are preserved as legacy drafts."*
++- `story_state.md` → *"Existing chapter manuscripts and earlier volume state notes are preserved as legacy drafts."*
++
++Five documents agree that 120 chapters exist. The repo contains 0. And the volume-1 "continuity log" goes chapter by chapter — ch_001 through ch_040 — describing what each one contains in enough detail that someone wrote them, or generated them, and then either never committed them (`.gitignore` is empty, so that's not it) or deleted them before the "Story base line" commit.
++
++**This is the thing to resolve first**, because everything else downstream depends on the answer:
++
++- If they exist somewhere → they need to come into the repo before anything else is discussed.
++- If they were generated and deleted → say so, and decide whether regeneration is the plan.
++- If those state notes are *aspirational* (written as though the volume were done, as a target) → then the state-notes format is currently lying to you, and it will lie to you again at volume 2. `story_state.md` should say what's actually true.
++
++The inconsistent *shape* across the six volumes is a tell. Volumes 1–3 have long "end state" + "continuity log" sections. Volumes 4–6 are bare scaffolds ending in "`Next chapter: blocked until Volume X v3 is complete.`" Three volumes are written as if finished; three are written as if not started. That's a session artifact, not a design.
++
++### 2. `Ferrand` is two different people
++
++- `canon/roster.txt`: `Ferrand  # merchant liaison` — a recurring minor support character.
++- `volume_02/outline.md` ch.15: *"Ferrand, the Church's cruelest field leader"* → ch.18 *The Warden Who Vanished* → erased.
++
++Same name, merchant vs. Church Warden, and the Warden dies. If both are meant to exist you need two names; if the roster entry is stale you need to delete it. This is the only outright factual contradiction I found in the canon layer, but it's the kind that a linter can't catch and a reader will.
++
++### 3. `epub_generator/assets/vol1/character_sheet.md` contradicts canon outright
++
++It's a v1/v2 survivor and it disagrees with `roster.txt` on nearly every field:
++
++| | character_sheet.md | canon v3 |
++|---|---|---|
++| Casian | **15** | **16** |
++| Edric | **45** | **49** |
++| Maren | **41** | **45** |
++| Elna | **11** | **12** |
++| Casian's character | *"runs the barony from the shadows with **cold, modern efficiency**"* | *"warm, dry, amused, decisive, and thoroughly human"* |
++
++That last row is the serious one. "Cold" and "efficiency" are the exact two things `constitution.md` was written to forbid, and `efficiency` is on the linter's WARN list. The art file `Sera_Vale.jpg` is wired to Elna but there is no Sera anywhere in canon — probably a renamed draft of Elna. Since this ship's in the EPUB front matter, it will end up printed in the book.
++
++### 4. The linter is checking the wrong story
++
++`tools/check_chapter.py` bans `the Quiet` and `the Ledger` as ERROR-level "secret-org" leaks. **Neither exists in this story.** The order is `the Hollow`. So the one leak you'd actually want caught — a POV character naming the Hollow on the page — is not checked at all. The rules were carried over from a previous project and never updated.
++
++Other issues in the same file:
++
++- Docstring and usage examples reference `story/writers_constitution.md`, `story/canon/roster.txt`, `story/volume_01/...`. The real paths are `a_god_in_the_garden/canon/...`. The code paths are correct; only the docs are stale, so it works but reads as broken.
++- `(re.compile(r"\bcompan(y|ies)\b"), "register")` will fire on *"a company of riders"* — a completely ordinary medieval phrase. Same for `networks`, which is legitimately usable of tunnels/roads.
++- `\bAI\b` case-sensitive will miss `Ai`/`ai` and fire on nothing useful.
++- `\bIndia\b` as a past-life marker is a very odd survivor of the old project.
++- Roster matching is exact-string, so frontmatter must say `Hask Veyr`, not `Hask`, or you get a false ERROR. Nothing documents that.
++
++### 5. `scrub_modern.py` is a loaded gun pointed at your manuscripts
++
++It opens every chapter, regex-replaces, and **writes back in place** — no dry-run, no diff, no backup, no confirmation. Given that point 1 means there are currently no files to destroy, this hasn't bitten yet. It will.
++
++Specific defects:
++
++- Duplicate dict key: `\bgeometric proofs\b` appears twice. Harmless, but it means the dict was never reviewed.
++- `\bdata\b → knowledge` is a global noun swap. Any legitimate use becomes nonsense.
++- `\binterface\b → connection` will fire on nothing in Varenthos (good) but also can't tell Argius's interface from a metaphorical one.
++- Dict ordering means longer phrases must precede shorter ones — currently correct, but fragile and undocumented.
++
++The linter (read-only, reports line numbers, you judge) is the right design. The scrubber (silent mutation) is the wrong design for prose. If it stays, it needs `--dry-run` as the default and a `git diff` gate.
++
++### 6. Two of the three agent prompts fight the canon
++
++- All three reference `story/writers_constitution.md`, a path that doesn't exist, and `chapter-reviewer` is still told it works on **'The Cost of Quiet'** — the previous project.
++- `prose_expander` is instructed to *"reset Argius to a cold tone."* `constitution.md` rule 8 says Argius is **dry** — "terse military precision, occasional flat humour." Cold is the v2 Argius. That agent will actively walk your protagonist's only companion back to a characterization you retired.
++- `chapter-reviewer` hardcodes a 2,500-word minimum, which is a real constraint but appears nowhere in canon. If it's law, put it in `constitution.md`; if it's not, the agents shouldn't enforce it.
++
++### 7. Small stale references
++
++- `story_state.md`: *"Draft Volume 1 v3 from `volume_01/outline_v3.md`"* — the file is `volume_01/outline.md`.
++- `epub_generator/README.md`: every example uses `../story/volume_01` and title `"The Cost of Quiet"`.
++- `epub_generator/epub.example.json`: title `"The Cost of Quiet"`, description describes a different book entirely.
++- `requirements.txt` pulls `qdrant-client[fastembed]` and `python-frontmatter` for a RAG indexer that **isn't in the repo**. The linter needs neither. You have dependencies with no consumer.
++- `canon/roster.txt` is missing every name volumes 5–6 need (`Mira`, `Nemea`, `Voss`, `Severin`, `Ivara`, `Tarek`). The volume state notes flag this honestly ("add to roster before drafting"), but it means roster.txt is not yet a master list, which is the one job it has.
++
++---
++
++## The thing I'd actually want to argue about
++
++Everything above is cleanup. This is the substantive question.
++
++**Volumes 1, 2, and 3 are the same book three times.**
++
++Put the three outlines side by side and the beat skeleton is nearly identical:
++
++| Beat | Vol 1 | Vol 2 | Vol 3 |
++|---|---|---|---|
++| Ch. 1–2: villain arrives certain; Casian receives the news while planting / gardening | Hask Veyr | Inquisitor Vaunt | Magister Roeth |
++| Ch. 3–5: villain commits an atrocity on ordinary people, proving teeth | burned border holding | Warden burns a healer | Concord kills Hollow operatives |
++| Ch. 5–7: the sharp noblewoman arrives to observe, notices he's *never surprised* | Seraine | Seraine | Seraine |
++| Ch. 13–15: the field girl challenges him about an old mark answering to him | Vesna | Vesna | Vesna |
++| Ch. 21–22: the villain strikes *near* home and nearly takes people he cares about | ch.22 | ch.22 | ch.21 |
++| Ch. 26–28: Casian engineers a trap that the enemy walks into believing they're cornering *him* | ch.28–30 | ch.28–30 | ch.28–30 |
++| Ch. 31–33: the enemy's command structure vanishes in stages; certainty → terror; erased | Hask | Ferrand + Vaunt's hunt | Roeth |
++| Ch. 34–36: the ally confronts him with what she can prove, which is nothing | Seraine | Seraine | Seraine |
++| Ch. 37: an old mark does something unexplained; atmosphere only | ch.37 | ch.37 | ch.37 |
++| Ch. 38–39: the victory is converted into permanent infrastructure/leverage | ch.38–39 | ch.38–39 | ch.37–39 |
++| Ch. 40: he is back in the garden, content, planning the next improvement | "Three Buds" | "Summer Roads" | "The Horizon Is His" |
++
++The near-miss always lands on an *adjacent* person (never Casian, per rule 1) — in all three volumes at almost the same chapter number. The confrontation-without-proof always happens in ch. 36. The mark does something unexplained in ch. 37, in all three.
++
++Now: some of this is *deliberate form*, and it can work — serialized genre fiction runs on reliable rhythm, and the conclusion of each volume landing in the garden is thematically correct (it's called *A God in the Garden*). A reader who loves the loop will be happy.
++
++But the risk is real and specific: **by the midpoint of volume 2, the reader knows the shape of the trick before the villain does.** The aura depends on surprise — the reader seeing the gap between the harmless boy and the force shaping the board. If the reader can predict the gap, you're not showing them aura anymore, you're showing them a process. And volumes 4–6 show you already know how to fix this: change *what kind of game* he's playing, not how big the enemy is.
++
++Worth deciding now, before 120 chapters are written:
++
++- Is the repeated skeleton intentional ritual (comfort reading), or drift?
++- If ritual: what varies *inside* the skeleton per volume so it doesn't read as a copy? Right now the variation is mostly the villain's ideology, which is the least interesting variable.
++- If drift: volume 2 is where to break it. It's the one where the *institution* (the Church, with a Synod, an archive, and a doctrinal fear of the Marches) is far more interesting than its field commander. The outline knows this — ch. 24 and ch. 33 are Selwyn writing reports about an ancient terror — but Selwyn stays a witness rather than becoming the engine. A volume where the antagonist's *institution* adapts to Casian instead of the antagonist being erased would break the pattern with material you already have.
++
++Second, smaller version of the same worry: **`constitution.md` says every act needs "at least two unmistakable Casian-aura payoffs."** That's 6+ per volume, 36+ across three volumes, and they're all variations on *things vanish and nobody can explain it*. Aura degrades with repetition faster than any other element of this genre. It might be worth asking what a payoff looks like that isn't an erasure — volume 4's caper answer (social dominance, exposure, letting a rival live diminished) is the template.
++
++---
++
++## Suggested order of operations
++
++1. **Resolve the missing manscripts.** Everything else is decoration until you know whether 120 chapters exist.
++2. **Fix the canon contradictions** — Ferrand, and the `character_sheet.md` ages/characterization (or delete the sheet).
++3. **Update the tooling to this story** — retarget the linter's secret-org rules to `Hollow`, fix the agent prompts' project name / path / Argius-tone instruction, add `--dry-run` to the scrubber, drop the unused `requirements.txt` deps.
++4. **Decide roster completeness** — add Vol 5–6 names or explicitly mark the roster as "volumes 1–4".
++5. **Have the volume 1–3 sameness conversation** while it's still cheap.
++
++Items 2–4 are an afternoon of work and I'm happy to do them. Item 5 is the one worth the conversation.
+diff --git a/reboot/tools/age_ledger.py b/reboot/tools/age_ledger.py
+new file mode 100644
+index 0000000..9266581
+--- /dev/null
++++ b/reboot/tools/age_ledger.py
+@@ -0,0 +1,255 @@
++#!/usr/bin/env python3
++"""
++Age Ledger — single source of truth for names and ages.
++
++The old project drifted because ages were written into prose and into
++per-volume notes by hand, and nothing recomputed them when the calendar moved.
++This tool makes the drift impossible:
++
++    python tools/age_ledger.py            # regenerate canon/roster.txt + canon/ages.md
++    python tools/age_ledger.py --check    # verify generated files are current (CI gate)
++    python tools/age_ledger.py --check-year 1219 chapters/*.md
++                                          # flag prose ages that contradict the ledger
++
++`canon/characters.json` is the only file anyone edits. Everything else is output.
++"""
++
++import argparse
++import json
++import re
++import sys
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parent.parent
++CANON = ROOT / "canon"
++DATA = CANON / "characters.json"
++
++GROUP_HEADINGS = [
++    ("vale",    "The Vale household"),
++    ("other",   "Argius"),
++    ("hollow",  "The Hollow — built by Casian, not inherited"),
++    ("romance", "Romance"),
++    ("wild",    "Unaffiliated"),
++    ("v1_foe",  "Volume 1 — antagonists"),
++    ("ash",     "The Ash — volume 2"),
++    ("v3_foe",  "Volume 3"),
++    ("v4_foe",  "The Court — volume 4"),
++    ("crown",   "The Crown — volume 4"),
++    ("v5_foe",  "Volume 5 (placeholders \u2014 confirm before planning)"),
++]
++
++
++def load():
++    return json.loads(DATA.read_text(encoding="utf-8"))
++
++
++def age_in(birth, year):
++    if birth is None:
++        return None
++    return year - birth
++
++
++def alive_in(ch, year):
++    return ch.get("dies") is None or year <= ch["dies"]
++
++
++# ── generators ────────────────────────────────────────────────────────────────
++
++def gen_roster(data):
++    vols = data["calendar"]["volumes"]
++    ref = vols[0]["year"]
++    out = [
++        "# Canonical names \u2014 Master Roster",
++        f"# GENERATED from canon/characters.json by tools/age_ledger.py. Do not edit by hand.",
++        f"# Ages shown are as of {vols[0]['id']} ({ref}). See canon/ages.md for every volume.",
++        "# Any name in chapter frontmatter `characters:` must appear here, spelled exactly.",
++        "",
++    ]
++    for group, heading in GROUP_HEADINGS:
++        members = [c for c in data["characters"] if c["group"] == group]
++        if not members:
++            continue
++        out.append(f"# \u2014 {heading} \u2014")
++        width = max(len(c["name"]) for c in members) + 2
++        for c in sorted(members, key=lambda c: (c["birth"] is None, -(c["birth"] or 0))):
++            a = age_in(c["birth"], ref)
++            age = f"born {c['birth']}, age {a}" if a is not None else "ageless"
++            dies = f" \u2014 dies {c['dies']}" if c.get("dies") else ""
++            note = f". {c['note']}" if c["note"] else ""
++            out.append(f"{c['name'].ljust(width)}# {age} \u00b7 {c['role']}{dies}{note}")
++        out.append("")
++    out.append("# Names appearing in more than one group, or in no group, are an error.")
++    return "\n".join(out) + "\n"
++
++
++def gen_ages(data):
++    vols = data["calendar"]["volumes"]
++    years = [v["year"] for v in vols]
++
++    out = [
++        "# Age Ledger",
++        "> **GENERATED** from `canon/characters.json` by `tools/age_ledger.py`. Do not edit by hand.",
++        "> If a number here disagrees with a chapter, the chapter is wrong.",
++        "",
++        "## The calendar",
++        "",
++        "| Volume | Title | Year | Season span |",
++        "|---|---|---|---|",
++    ]
++    for v in vols:
++        out.append(f"| {v['id'][-2:].lstrip('0')} | *{v['title']}* | {v['year']} | {v['span']} |")
++
++    out += [
++        "",
++        "**Rule:** every chapter's frontmatter carries `year:`. Ages are computed, never invented.",
++        "A birthday is not a scene unless it is a scene. When in doubt, a character is the age in this table",
++        "for the whole volume, and the next volume's table entry is the age they turn.",
++        "",
++        "## Ages by volume",
++        "",
++        "| Character | Birth | " + " | ".join(f"V{i+1}" for i in range(len(vols))) + " |",
++        "|---" * (len(vols) + 2) + "|",
++    ]
++    for group, heading in GROUP_HEADINGS:
++        members = [c for c in data["characters"] if c["group"] == group]
++        if not members:
++            continue
++        out.append(f"| **{heading}** | | " + " | ".join("" for _ in vols) + " |")
++        for c in sorted(members, key=lambda c: (c["birth"] is None, -(c["birth"] or 0))):
++            cells = []
++            for y in years:
++                if c["birth"] is None:
++                    cells.append("\u2014")
++                elif not alive_in(c, y):
++                    cells.append("\u2020")
++                else:
++                    cells.append(str(age_in(c["birth"], y)))
++            out.append(f"| {c['name']} | {c['birth'] if c['birth'] else '\u2014'} | " + " | ".join(cells) + " |")
++
++    out += [
++        "",
++        "\u2020 = dead by this volume. \u2014 = not applicable (ageless).",
++        "",
++        "## Drift traps",
++        "",
++        "These are the ones that broke the previous drafts. Check them every time.",
++        "",
++        "- **Emric** is an infant in Volume 1 and a small boy by Volume 5. He is the fastest-moving",
++        "  age in the cast and the easiest to leave behind.",
++        "- **Elna** is twelve when the story opens and seventeen when it ends. Her voice must change.",
++        "  A twelve-year-old and a seventeen-year-old do not speak the same way.",
++        "- **Casian** is sixteen at the start and twenty-one at the end. He is a boy in Volume 1 and an",
++        "  adult by Volume 5, and the mask has to survive that. A twenty-one-year-old playing the",
++        "  overlooked fourth son is a different performance from a sixteen-year-old doing it.",
++        "- **Seraine** is three years older than him and stays three years older. Do not let the gap",
++        "  drift toward zero because it reads better in a scene.",
++        "- **Oswin** is seventy-one at the start. Over five years that is a real risk, and it should be",
++        "  felt without ever being used as a threat.",
++        "",
++    ]
++    return "\n".join(out) + "\n"
++
++
++# ── checks ────────────────────────────────────────────────────────────────────
++
++def check_generated(data):
++    ok = True
++    for name, gen in (("roster.txt", gen_roster), ("ages.md", gen_ages)):
++        path = CANON / name
++        if not path.exists():
++            print(f"  MISSING  canon/{name}")
++            ok = False
++            continue
++        if path.read_text(encoding="utf-8") != gen(data):
++            print(f"  STALE    canon/{name} \u2014 re-run without --check")
++            ok = False
++    return ok
++
++
++def check_validity(data):
++    ok = True
++    names = [c["name"] for c in data["characters"]]
++    dupes = {n for n in names if names.count(n) > 1}
++    if dupes:
++        print(f"  DUPLICATE NAME  {', '.join(sorted(dupes))}")
++        ok = False
++    years = [v["year"] for v in data["calendar"]["volumes"]]
++    if years != sorted(years):
++        print(f"  CALENDAR NOT ASCENDING  {years}")
++        ok = False
++    for c in data["characters"]:
++        if c["birth"] is None:
++            continue
++        if c["birth"] > years[0]:
++            print(f"  BORN IN THE FUTURE  {c['name']} (birth {c['birth']})")
++            ok = False
++        if c.get("dies") and c["dies"] < years[0]:
++            print(f"  DEAD BEFORE THE STORY STARTS  {c['name']}")
++            ok = False
++    return ok
++
++
++AGE_RE = re.compile(r"\b(\d{1,2})[- ](?:years?[- ]old|year[- ]old)\b|\b(\d{1,2}) years old\b", re.I)
++FRONT_YEAR = re.compile(r"^\s*year:\s*(\d{4})\s*$", re.M)
++FRONT_CHARS = re.compile(r"^\s*characters:\s*\[(.*)\]\s*$", re.M)
++
++
++def check_chapters(data, paths):
++    by_name = {c["name"]: c for c in data["characters"]}
++    bad = 0
++    for p in paths:
++        path = Path(p)
++        if not path.exists():
++            print(f"{path}: missing")
++            bad += 1
++            continue
++        text = path.read_text(encoding="utf-8")
++        ym, cm = FRONT_YEAR.search(text), FRONT_CHARS.search(text)
++        if not ym:
++            print(f"{path}: no `year:` in frontmatter \u2014 ages cannot be verified")
++            bad += 1
++            continue
++        year = int(ym.group(1))
++        cast = [n.strip().strip("'\"") for n in (cm.group(1).split(",") if cm else []) if n.strip()]
++        expected = {c: age_in(by_name[c]["birth"], year) for c in cast
++                    if c in by_name and by_name[c]["birth"] is not None}
++        for m in AGE_RE.finditer(text):
++            stated = int(m.group(1) or m.group(2))
++            if stated not in expected.values():
++                print(f"{path}: says '{m.group(0)}' in {year}, but the ledger gives "
++                      f"{expected or 'no ages for this cast'}")
++                bad += 1
++    return bad == 0
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("--check", action="store_true", help="verify generated files are current")
++    ap.add_argument("--check-year", action="store_true", help="verify prose ages in chapter files")
++    ap.add_argument("chapters", nargs="*")
++    args = ap.parse_args()
++
++    data = load()
++
++    if args.check_year:
++        print("age ledger \u2014 chapter check")
++        ok = check_chapters(data, args.chapters)
++        return 0 if ok else 1
++
++    if args.check:
++        print("age ledger \u2014 verification")
++        ok = check_validity(data) and check_generated(data)
++        print("  OK" if ok else "  FAILED \u2014 fix canon/characters.json, then regenerate")
++        return 0 if ok else 1
++
++    if not check_validity(data):
++        print("refusing to generate from invalid data")
++        return 1
++    (CANON / "roster.txt").write_text(gen_roster(data), encoding="utf-8")
++    (CANON / "ages.md").write_text(gen_ages(data), encoding="utf-8")
++    print("wrote canon/roster.txt and canon/ages.md")
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+-- 
+2.47.3
+
