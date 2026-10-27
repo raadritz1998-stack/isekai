@@ -1,0 +1,18 @@
+{
+  "name": "epub_generator",
+  "version": "1.0.0",
+  "description": "Build an EPUB from a story volume folder (chapters/*.md + optional per-volume epub.json).",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["epub", "ebook", "markdown"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "epub-gen-memory": "^1.1.2",
+    "marked": "^18.0.2"
+  }
+}

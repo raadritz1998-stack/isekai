@@ -1,0 +1,53 @@
+# Canonical names — Master Roster. One per line.
+# Format: Name    # notes / age / relationship
+# The linter flags any frontmatter `characters:` not on this list.
+
+# — Vale family (ages strictly locked) —
+Casian        # protagonist, 4th son, 16. Unmatched Current-user; plays a normal son by choice. Does not know the First Watch history.
+Edric         # father, Baron, 49, head of house. Sees an ordinary son.
+Maren         # mother, 45. The kitchen ritual. Adores him, knows nothing.
+Oswin         # paternal grandmother, 71. The family confidant — knows the order (not the extent).
+Aldric        # heir, 24, married.
+Rowan         # Aldric's wife, 23.
+Emric         # Aldric's son, 1.
+Gareth        # 2nd son, 21. The sword.
+Brennan       # 3rd son, 18. The social one.
+Elna          # sister, 12. His soft spot.
+
+# — Argius —
+Argius        # rebooted military interface; key to the Current. Pre-birth First Watch protected Casian but its archive is missing.
+
+# — The Hollow (inner core — know his power, not his origin) —
+Sabine        # ~60, former head of the Hollow; knows Casian's power, not his origin
+Maeve         # ~40, the order's mind — intelligence & scrying; knows Casian's power, not his origin
+Corin         # ~35, field-master & blade; runs operations; knows Casian's power, not his origin
+
+# — Romance / Key Dynamics (multiple interests; endgame TBD) —
+Seraine       # Lady Seraine Varyn, daughter of Duke Varyn; sharp, political, knows Casian is impossible but has no proof
+Vesna         # young Hollow field operative; old marks answer Casian, but she does NOT know what he is; independent, blunt
+Sabeth        # Iron Concord agent; lethal, clever; detects a hidden power but gets no cheap proof; enemies-to-lovers
+
+# — Antagonists & Arc Figures —
+Hask Veyr     # warlord; Vol 1 menace; erased
+Selwyn        # Warden of the Ashen Church (Vol 1); half-turns by Vol 2-3
+Vaunt         # Inquisitor; leads the witch-hunt (Vol 2); defeated, not dead
+Roeth         # Magister of the Iron Concord (Vol 3); regional hand; ended
+Concord Masters # unseen makers of the rival key (series spine)
+Lucan         # Duke of Redmere (Vol 4); elegant, competitive court operator who assumes every house has a price
+Caedmon       # Royal Chancellor (Vol 4); observant, dry, loyal to the Crown rather than a faction
+Orlan         # Royal Marshal (Vol 4); blunt soldier who believes the eastern Compact must be measured
+
+# — Varenthos Realm Figures —
+Aldren        # King Aldren II
+Varyn         # Royal Duke of Ostmark
+Harven        # Count of Harrowmere
+Osric         # Baron of Thornwall
+Leth          # Baron of Greyvane
+Calla         # Baroness of Fenwick
+
+# — Recurring Minor / Support Characters —
+Jory          # Vale guard captain
+Kael          # Hollow scout lieutenant
+Corvin        # border scout
+Vane          # Hollow field operative
+Ferrand       # merchant liaison

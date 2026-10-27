@@ -1,0 +1,6 @@
+# fastembed is bundled with qdrant-client[fastembed]
+# No Google API key needed - all embeddings run locally
+qdrant-client[fastembed]>=1.9.0
+python-frontmatter>=1.1.0
+rich>=13.0.0
+

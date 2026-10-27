@@ -1,0 +1,22 @@
+{
+  "//": "Copy this to <volume-folder>/epub.json and edit. Every field is optional.",
+  "//title": "If omitted, falls back to the H1 in the volume's outline.md, then the folder name.",
+  "title": "The Cost of Quiet",
+  "subtitle": "Volume One",
+  "author": "Raadritz",
+  "publisher": "unknown traveller",
+  "lang": "en",
+  "description": "A man who built a perfect quiet life discovers that being this good at existing makes silence impossible to maintain.",
+
+  "//cover": "Path relative to the volume folder. Skipped with a warning if the file is missing.",
+  "cover": "assets/cover.png",
+
+  "//assets": "Optional. Override the asset search dir (default: <volume-folder>/assets).",
+
+  "//frontMatter": "Image pages shown before the table of contents. `file` is looked for in the volume's assets/ dir first, then epub_generator/assets/. Missing files are skipped, so you can list them now and add the art later.",
+  "frontMatter": [
+    { "title": "Core Cast", "file": "assets/core-cast.png", "alt": "Core cast character sheet" },
+    { "title": "Supporting Cast", "file": "assets/supporting-cast.png", "alt": "Supporting cast character sheet" },
+    { "title": "Map of the Eastern Marches", "file": "assets/map.png", "alt": "Map of Ostmark and the Vale barony" }
+  ]
+}
