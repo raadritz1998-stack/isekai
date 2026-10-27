@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 20 / 40 |
-| Next | ch. 21 — *The Council in Osric's Hall* (THE COUNCIL BEAT) |
+| Drafted | 24 / 40 |
+| Next | ch. 25 — *The Eastern Strip* |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -92,7 +92,16 @@
   - **This is the volume's cost. It is not a failure of power; it is a failure of attention and of wanting a story.**
 - **ch_020 *I Was Not Looking* (Casian).** The funeral; four hundred people, three hundred of whom are not Vale's. The meeting where the network's true purpose is said aloud for the first time: *a thing that has nowhere in this county I'm not* — not to kill anyone, but so that a thing starting in the east is known before it is near a house. Ansel says it back. Nessa's condition: keep the surgery open, train a second person, and account for every penny in a book she can see. Nessa's insight that changes the meeting: they need a door that isn't the Vale. Maeve: *"there's houses in this county that every man will walk into, and one of them is a mill."* Also: money is nearly gone, and Casian proposes a real, dull, named carrying business as cover and wage.
   - Dependency count: **18**.
-  - Irreversible: **the network has a stated purpose, a nickname-proof dullness planned, a new door, and a stated end-state.** Edric's warning, which is the series thesis in four sentences: *"the day is coming when four hundred people in these marches can't do a thing without you, and on that day you will be the most dangerous thing in the east and it will not be because of what you can do... you'll be dangerous because you'll be needed, and there's no wall in the world for that."*
+  - Irreversible: **the network has a stated purpose, a dullness planned, a new door, and a stated end-state.** Edric's warning, the series thesis: *"you'll be dangerous because you'll be needed, and there's no wall in the world for that."*
+- **ch_021 *The Council in Osric's Hall* (Hask). THE COUNCIL BEAT.** Five men at a table: Osric, Weyl, Rennick, Hask, Tolan. The room is competent. Rennick proposes three things: a deed against the eastern strip; forged letters dated '16 giving *the valley* to the Count; and — the worst — a report to Warden Selwyn that the eastern marches harbour the old thing, so the Church does the work and the Count spends the spring looking at a heresy instead of at Thornwall. Hask refuses to touch the plan he doesn't understand. Osric asks the room what the thing wants. **The boy with the jug answers: "To be left alone."** Osric laughs, gives him a coin, sends him to bed. Tolan is the only one who sees. Then the realisation in stages: no jug in that kitchen, no cellarer, a carter paid four marks to let a boy ride up. They find nothing.
+  - Irreversible: **the plan for the spring is set, and it is to hand the Vales to a Church over a thing that is true.** Casian has heard the whole of it and taken a coin for his trouble.
+- **ch_022 *What Tolan Did Not Say* (Tolan).** Tolan's third book. He goes back to the ford and finds an eight-horse standing place with no fire and a woman's boot-heel and a linen bandage — the party came down off the cut. Works out there is one thing behind all of it and it is not a warlord. Gives the second book to Ferrin for safekeeping. Rides to Fenwick and asks a woman in a field, hat in hand, whether anyone has been asking questions — which is him putting a hand out to Casian without knowing it. Writes it all down: *"I asked for twenty men on that barn in October, and for the yard to be sealed on the nineteenth, and both times I was told no by men who were certain."* Buys a horse in September. Tells Osric plainly that the carefulness is what got him here.
+  - Irreversible: **Tolan is out of the room in all but body, and the written record now exists.**
+- **ch_023 *The Ground Prepares Itself* (Corin).** Corran and Son opens (1 Dec) — a real, dull, licensed carrying business, nine marks in its first month, deliberately unprofitable-looking. Maeve's lesson: *a man keeps a business book and writes his sins on the same page as his barley.* Corin makes eleven places in the county worth being — repaired folds with a gap in the wall a man can lie in. Kael joins (9 Dec), the second rider. **Vesna walks all nineteen miles of the cut and finds eleven gates, not four — and the newest has been mended two or three years ago by someone who is not Casian, not Hask, not the Church.** Casian is told to leave it alone.
+  - Dependency count: **20**.
+  - Irreversible: **there is a third party maintaining the old crossings.** Edric hears of the finding against the eastern strip and decides to go to Harven in the spring.
+- **ch_024 *Osric's Courtesy* (Seraine).** Three days at Thornwall. She counts four lies and can prove none. A grey hill horse in the yard whose master calls himself a farmer. Hask tells her plainly to ask *the man who took the eleven out of the barn*, and means all of it — the one flat note she does not hear. Rennick cheerfully tells her the levy is "on the sundries" and does not know he has said anything. She finds the east range room with four cups and a jug and one cup unused, and no council in the hall. She works out the levy-and-debt loop from a queue in a street.
+  - Irreversible: **Seraine knows there was a secret council and that Osric wants to know which road she takes.** The Count's clock is running.
 
 ## Carry-out checklist
 
