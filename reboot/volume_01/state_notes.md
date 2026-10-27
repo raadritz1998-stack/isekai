@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 1 / 40 |
-| Next | ch. 2 — *Forty Years* |
+| Drafted | 4 / 40 |
+| Next | ch. 5 — *Ash on the Road* |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -46,6 +46,16 @@
 - **ch_001 *The Bench* (Casian).** Morning in the walled garden; roses cut back hard; Elna (12) on the bench. A scout on the ridge, one and a quarter miles out, sent from Hask's country the long way round — Casian turns the horse and the man goes home without ever knowing, from a bench, without standing up. Oswin (71) says the most suspicious thing about him is how pleasant he is. Supper, twelve at the table, Emric (1) beating a spoon. **New:** Edric reveals four riders "going west, not stopping" three days back on the Ashgrove road — the first thread of the ch. 5 burn. Edric's line to hold: *"You're the only one of them that doesn't want something from me. It's restful and it worries me."* After supper Casian walks the ridge and stands where the scout sat, looking down at his own house the way a stranger would. Ends on the walnut and Argius's line: *"You will be here for all of it."*
   - Irreversible: nothing yet, and that is deliberate. No one in the house knows. No name has been spoken aloud that matters.
   - Seeded: the Ashgrove road, four riders, Osric unnamed, Hask unnamed, the walnut, the east wall needing stone before the wet.
+- **ch_002 *Forty Years* (Casian).** The graft takes in four days. The water channel and its four leather gates. Maren watches him open the last one and says nothing — *"the flat neutral interest she used for the water channel"* is her whole character. Breakfast. Hob the mason mentions building work at Thornwall paid for out of a purse too full. Gareth reports on Hask Veyr: a hundred men, no title, a slate roof, bought land and kept the sellers — *"he's going to buy a friend first."* Oswin asks what he will do when the next bad man comes. Argius asks what it actually retains: a street that sloped, a smell, seven words with no grammar, a number whose purpose is gone. Ends on the walnut and *"I will."*
+  - Irreversible: Argius's archive is confirmed as fragments, not records — there is no history to recover.
+  - Seeded: Hask named for the first time. Thornwall money with no obvious source.
+- **ch_003 *What the Marches Keep* (Casian).** Fenwick, the moved boundary stone, Reed and Tolsey both honest and both wrong. Casian settles it without a verdict and both men leave believing they won. Calls out that a stone was lifted and set down two or three seasons ago, not walked. The Keeping explained as custom: nobody knows why, the Ash has given up on it, and the fear is real and never discussed. A frightened farmer, oxen that would not pass the Fenwick stone. Calla: *"Don't be charming at me, it's the least interesting thing about you."* He gives her cuttings. Edric's report scene: *"I want you to grow up in a country that isn't frightened of its own fields."*
+  - Irreversible: **someone moved a Keeping stone two seasons before the story and nobody saw it.** Open thread, deliberately unexplained.
+  - Seeded: Calla now watching him. Edric has decided which questions he can afford.
+- **ch_004 *The Ledger at the Mill* (Maeve).** The mill's paper is held by Rennick of Thornwall, 412 marks, 131 of it fraud. Casian reads the town — eleven shops on one street carrying paper from the same factor, and Osric's steward riding a horse bred in Hask's hills. He buys the paper at full price in coin in front of a clerk, on purpose, so that Rennick has money and no story. Offers Maeve a loan at no interest for six years and asks for one thing: the book, and to be told what the numbers mean. Oswin's warning: *"It concerns you. Every time, in the small hours, in a room with no one in it."* Edric notices, and says nothing, and starts watching.
+  - **Dependency count: 1 (Maeve).**
+  - Irreversible: he has spent most of his capital and has a creditor's claim on a miller, which is the first thing he owns that can be taken from him.
+  - Seeded: Osric's steward, the eleven shops, Rennick, Brennan's loan (Brennan will want to know eventually).
 
 ## Carry-out checklist
 
