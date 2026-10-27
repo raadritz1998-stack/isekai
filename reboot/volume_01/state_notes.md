@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 8 / 40 |
-| Next | ch. 9 — *What Osric Wants* |
+| Drafted | 12 / 40 |
+| Next | ch. 13 — *Teeth* (Hask takes eleven captives) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -65,6 +65,16 @@
   - Irreversible: eleven names exist in Casian's hand only, and Ansel has burned his own deniability.
 - **ch_008 *The Man Who Waits* (Corin).** Corin Ahl, 35 years an armsman, given the first task in his life that uses the whole of him: a wagon down the Ashgrove road as bait, reported to the baron rather than to Casian. Finds a cold fire square on the drove — nine men, ten nights, sited properly. Concludes the enemy has a soldier working for a man who isn't one. Jory covers for him. Edric's line: *"Is he right?"*
   - Irreversible: **the Hollow now has a second working part and its first real risk.** Corin has written a private note asking why a boy of sixteen can see what he cannot.
+- **ch_009 *What Osric Wants* (Osric).** The top of the enemy ladder on the page. Osric, 55, careful for thirty years, a genuinely fair landlord who gets down off his horse to settle a boundary. He is not stupid: he works out that paying the fraudulent 131 marks means the boy read the book. He proposes the eastern strip as eleven parcels of nobody's land, and writes to Hask *without naming him*, to the quiet man on the grey horse. Seraine Varyn's inspection is announced. Hask's reply arrives in nine days and offers Osric his own ambition back, and Osric burns it and understands he is being priced.
+  - Irreversible: **Osric has committed and Hask has his measure.**
+- **ch_010 *The Empty Ford* (Casian–Tolan).** Casian takes out the causeway on the Veyr — not the men, the crossing. He does it from the garden bench with a cup in his hand, and it rains, and the stone goes. Four drivers walk home with a story about a mist. Tolan investigates for two days, drags the channel, interviews all four separately, and works out that a story which does not improve in the telling is a story somebody has thought about. He is laughed at in the hall and writes it down in a book titled *Things that should not have been so.*
+  - Aura payoff #2: **a place that isn't there.**
+  - Irreversible: Hask has a winter with a hundred men and no grain. **Tolan now has a written record.**
+- **ch_011 *The Girl Who Walks in the Dark* (Vesna).** Vesna Orrow, 19, uplander, hired by Corin. Nine runs. On the seventh she hears two men and a horse going north on the moor road — toward a place, not a raid. Then she walks the cut and finds **four gates with no gates in them**, a line of crossings built into an old wall above the line where any road would go, weathered as old as the wall itself. She asks what she is part of and is told the truth. She asks for Fenwick to be told about her, and for it to be said by Casian and not by her.
+  - Irreversible: **the four gates are the second unexplained old-country thread** (with the moved Fenwick stone). She is in.
+- **ch_012 *The Shape of It* (Casian).** The old dairy. Five people around a map for two hours. Maeve, Corin, Vesna, Ansel and Casian. Money argument: two riders cost twenty marks a quarter, Maeve lends nine, Ansel four, and Casian refuses any more lending because *the day it costs me more than it costs you is the day you're entitled to a vote.* Ansel's point that wins the evening: the danger is not the men coming out of the hills, it is the forty men already in the county who owe somebody outside it. Casian says the thing out loud once — that he has brought a map, a purse and a bad idea, and everything else was built by them. Then: **Hask gets one move**, so every concealed friend has to come into the open.
+  - Dependency count: **14**.
+  - Irreversible: the thing has a shape and five people know it has a shape. Elna reports a grey-coated man who counted eleven at table in the spring. Edric says he will not ask, and that he will know.
 
 ## Carry-out checklist
 
