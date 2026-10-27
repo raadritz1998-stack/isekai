@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 36 / 40 |
-| Next | ch. 37 — *A Dance of Facts* (Seraine–Casian) |
+| Drafted | **40 / 40 — VOLUME 1 COMPLETE** |
+| Next | volume 2 planning — *The Ash*, 1218. Ch. 1 of 40 is a new outline, not a new draft. |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -42,7 +42,7 @@
 | ch. 30 | 30 | + Watt and Hollis Wray |
 | ch. 32 | 30 | no change — thirty-one men desert Hask and none of them are his |
 | ch. 35 | 34 | + Wex, Orlan, and the four hundred and twelve who are no longer Osric's |
-| ch. 39 | **41** | the list |
+| ch. 39 | **41** | the list — and one of the forty-one is Edric, and it says so |
 
 ## Continuity log
 
@@ -165,12 +165,32 @@
 - **Rennick** is in Harven giving evidence and believes a boy can be reasoned with.
 - Casian still owes Vesna the promise from ch. 29: **say aloud what you are for, where people can hear it** — ch. 38.
 
+
+- **ch_037 *A Dance of Facts* (Seraine).** Harven, June. The hearing is dull on purpose and Edric's honesty is what damns him: he doesn't know what happened and sounding like a man covering for it is worse than lying. **Marshal Vane** is courteous and it is a warning — he tells Seraine to her face that her father asked him to be careful of her. His closing remark to the Count is the volume's real alarm: whatever is happening in the east *"is not a matter of a levy, and in ten years it will not be a small thing, and the crown has no man in that country and no means of putting one there."* **Rennick's offer to her** — *"a boy like that can be reasoned with"* — is the seed of volume 2's approach.
+  - Seraine's cloister scene with Casian: she lays out everything she knows, correctly, and it amounts to nothing; he answers honestly inside his limits and does not perform. Her decision is stated plainly and it is her own: she will go on writing the quarterly reports and write them so that they protect four thousand people. Her crossed-out line ("I will not write another report that does not say that") is a vow, not a plot.
+- **ch_038 *The First Boundary* (Casian).** Corin writes **eleven articles**, and Ivet is the reason they're readable (*"Say what it is and then shut up"*). They are read from a barrel at the June fair in front of 411 people by a boy whose voice breaks twice. Article ten is Corin's and the one that matters: **the mill will not take a matter to a lawyer, will not send for a lord, and will not ask any man to swear an oath.** Casian keeps Vesna's March promise and says aloud what he is for — and then says the uncomfortable half before anyone else can: he is sixteen, he does not hold the county, and *"if you'd rather have a baron and a lawyer, say so at the fair and I'll put the book on the barrel and walk home."*
+  - **Edric signs**, knowingly reducing his own office: *"it is not the office I inherited, and I'd like you to understand that I know it, and that I'm signing anyway."*
+  - Seraine rides nineteen miles to watch a Tuesday: nine cases, no oaths, one man caught by his own answer, a boy of nine fined a penny.
+  - Argius's warning, and Casian's best line of the volume: *"that's the whole of the danger, isn't it. Not the taking. The being liked while you take."*
+- **ch_039 *Forty Names* (Maeve).** **The dependency count lands at 41** — Maeve has been keeping the list since 4 March, in the back of the barley book, crossing nobody out but Vesna. Two entries do the work: *Edric Vale — asks his fourth son before he signs a thing, and does it openly, and has told me so* and *Casian Vale — decides.*
+  - Casian's response is institutional, not emotional: **three keepers of the book, two hearers of a case, the race at Fenwick in Calla's name, a second person in the surgery** (Nessa chose her and told him rather than asking), and **the list read aloud at the June fair every year whatever the number is.** He writes a page in the front of the book beginning *"I have made a county that cannot lose me, which is not the same as one that does not need me."*
+  - Nessa makes him write *the surgery has two people in it* on the money page, not in the shame list.
+- **ch_040 *Three Buds* (Casian).** The walnut planted 18 October, nine feet, eleven marks, bought *because* the nurseryman said it wouldn't take. A family dinner that is deliberately and completely ordinary — the drainage story again, Brennan's barrel, Emric asleep on Gareth, Elna asking what happened to the nine men who came in February and getting an answer she doesn't like. **Argius's last speech** names the four things that will outlive him (millrace, road, surgery, the list) and says the thing that closes the volume's arc: *"I said in the spring that you would be here for all of it. I have never once been wrong about that part."*
+  - **Three buds on the scion in October**, which is the wrong season and which Maren notices first. Then the gate, which somebody has shut. And the world arriving on purpose: **Seraine's letter** — a spring commission, a clerk of her own, and *"I have told you first."* Casian is pleased. That pleasure is the last note of volume 1.
+
+## Volume 1 — closed
+
+- **40 / 40 chapters, ~128,500 words.** Register grep clean across all forty; `--check` and `--check-year` clean.
+- **Carry-out checklist status:** Hask dead (as an absence, body never found — deliberately), Osric removed unpublicly, Tolan alive and holding three books plus a copy of Selwyn's report and therefore the warning for volume 2. Selwyn's report written and wrong, filed, and signed by Tolan *as to the facts*. Seraine has a commission, a decision and her own counsel. Vesna has lost one and given herself orders. Maeve has the list and it is 41. The walnut is planted. The marches say *curse* and believe it means luck.
+- **Deliberate deviations, all recorded:** ch. 26 is Elna's POV, not Hask's; ch. 32 is Tolan's with family sections; ch. 37 keeps Seraine's decision interior rather than making her a plot device; Hask's death is an absence rather than a scene.
+- **Open into volume 2:** the eleven gates and whoever mends them; the Fenwick stone; the Marshal's account of the east and the crown's new interest; **Seraine's spring commission**; Tolan as the only man who can contradict the Warden; Rennick's belief that a boy can be bought; three buds in October and a shut gate.
+
 ## Carry-out checklist
 
-- [ ] Hask dead, Osric removed unpublicly, Tolan alive and warning volume 2
-- [ ] Selwyn's report written and wrong
-- [ ] Seraine has evidence that amounts to nothing and a decision to be useful
-- [ ] Vesna has given herself orders and lost someone doing it
-- [ ] Maeve has the list, and the list is 41 names
-- [ ] The walnut is planted and Argius has said his line
-- [ ] The marches say *curse* and believe it means luck
+- [x] Hask dead, Osric removed unpublicly, Tolan alive and warning volume 2
+- [x] Selwyn's report written and wrong
+- [x] Seraine has evidence that amounts to nothing and a decision to be useful
+- [x] Vesna has given herself orders and lost someone doing it
+- [x] Maeve has the list, and the list is 41 names
+- [x] The walnut is planted and Argius has said his line
+- [x] The marches say *curse* and believe it means luck
