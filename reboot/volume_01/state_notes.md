@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 0 / 40 |
-| Next | Read-through of `outline.md`, then ch. 1 |
+| Drafted | 1 / 40 |
+| Next | ch. 2 — *Forty Years* |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -43,7 +43,9 @@
 
 ## Continuity log
 
-Filled as drafted. One line per chapter: title, POV, what changed, what is now irreversible.
+- **ch_001 *The Bench* (Casian).** Morning in the walled garden; roses cut back hard; Elna (12) on the bench. A scout on the ridge, one and a quarter miles out, sent from Hask's country the long way round — Casian turns the horse and the man goes home without ever knowing, from a bench, without standing up. Oswin (71) says the most suspicious thing about him is how pleasant he is. Supper, twelve at the table, Emric (1) beating a spoon. **New:** Edric reveals four riders "going west, not stopping" three days back on the Ashgrove road — the first thread of the ch. 5 burn. Edric's line to hold: *"You're the only one of them that doesn't want something from me. It's restful and it worries me."* After supper Casian walks the ridge and stands where the scout sat, looking down at his own house the way a stranger would. Ends on the walnut and Argius's line: *"You will be here for all of it."*
+  - Irreversible: nothing yet, and that is deliberate. No one in the house knows. No name has been spoken aloud that matters.
+  - Seeded: the Ashgrove road, four riders, Osric unnamed, Hask unnamed, the walnut, the east wall needing stone before the wet.
 
 ## Carry-out checklist
 
