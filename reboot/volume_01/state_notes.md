@@ -6,8 +6,8 @@
 | | |
 |---|---|
 | Planned | 40 / 40 (outline approved for read-through) |
-| Drafted | 28 / 40 |
-| Next | ch. 29 — *The Hill-Woman's Choice* (Vesna) |
+| Drafted | 32 / 40 |
+| Next | ch. 33 — *The Boy at the Gate* (Casian–Hask) |
 | Year | 1217. Casian 16, Elna 12, Emric 1, Seraine 19, Vesna 19 |
 
 ## Start state
@@ -38,7 +38,9 @@
 | ch. 23 | 20 | + Kael, and the eleven families on the eastern strip |
 | ch. 25 | **27** | + Brennan, Calla, six tenants' paper, the millrace. Reckoned aloud in ch. 25 and deliberately loose: it counts people, not parcels. |
 | ch. 28 | 27 | no change — the nine released raiders and the four who lived are *not* dependents, and Casian does not count them |
-| ch. 30 | 30 | + Jory, and the two men who will not be named until they are |
+| ch. 29 | 28 | + Vesna, who is now a person who gives herself orders |
+| ch. 30 | 30 | + Watt and Hollis Wray |
+| ch. 32 | 30 | no change — thirty-one men desert Hask and none of them are his |
 | ch. 35 | ~36 | + Osric's people, as they come over one at a time |
 | ch. 39 | **41** | the list |
 
@@ -116,6 +118,27 @@
 - **ch_028 *What Seraine Saw* (Seraine).** 3 March. She walks the road for a day and finds nothing a story can be built on: no blood, no tracks, no dropped tack, nineteen saddles unbuckled. Nib's testimony: *"There wasn't the sound of a man shifting his feet."* Sennet's aunt: nine men came back and one gave her grandson a penny. **Gareth**, grey-faced, tells her it was a person and that his father knows and will not say, and that he will not be the son who says it first. She writes an eleven-page report — levy, queue, table, the Baron of Vale to be heard at Harven — and **crosses the true thing out of it**, because out loud it sounds like a duke's daughter frightened by a county, and putting a true thing where it can discredit three true things is how Thornwall wins. She sends it instead **in a sealed letter to her father alone**, four pages, naming what she saw. The reply is five lines from his clerk: the Duke will speak to her in person; stay in the east until Harven; **say nothing to the Royal Marshal, who is travelling in that country this month.**
   - Irreversible: **one man in the kingdom now knows there is a person in the east doing this on purpose** — and someone in the crown's own apparatus is already moving through the county.
   - Locked for ch. 29+: she has promised Osric his name goes in the report, and it does. Integrity is her method, not her weakness.
+
+
+- **ch_029 *The Hill-Woman's Choice* (Vesna).** The man with Hask's paper is going round the hills asking *who talked to the Vale*; a widow's two sons will not survive the question. **Vesna acts without instructions** for the first time and moves four families to Hanging Rake (one of Corin's eleven) by the eleven-mile route because the drove has four men on it. **Tam Sillow, 74, dies in the byre at first light** — not killed, just walked to death, and that is hers. She tells Casian to his face that she did it unasked and will not ask again, and he does not defend himself: *"I'd have done it better and you'd have done it sooner, and a man is dead because neither of us told the other what we were about."* Her second charge is the one that changes the volume's shape: **nobody in the hills knows what he is for**, and a thing that says nothing gets a story told about it. Calla, hearing it, names it: *"You've just described a boundary."*
+  - **The counter-evidence chapter: Vesna is the only person who becomes less dependent.** She learns to write her own name badly, in the margin, next to four names that are hers.
+  - Irreversible: **Casian now intends to say aloud what he is for, in front of four hundred people, not in a hall.** That promise is live for ch. 38.
+- **ch_030 *The Last Road In* (Corin).** Eleven days of closing roads: the ford by a miller's complaint, the Middle Drove by settling a nine-year boundary dispute in one afternoon, the Ashgrove road by a condemned bridge (and the complainant was real and was paid four marks by a carter he did not know), the cut watched from thirteen places — and **the drove is left open and quietly mended**, entered in the book as *carting work, four days, eight marks.* Maeve: *"You're not closing a road. You're making a road the only one, and then making it good, and then telling nobody."* Watt's eleven years of tallies makes the map true; Ivet tells Corin he came home proud and should not. **Hollis Wray** has already moved his family onto the ford at the salt-house, of his own accord, because a carter was kind to his boy.
+  - Irreversible: **the trap exists and is made of roads, bread and a widow's byre, and no one will be able to say afterward what was done.** Corin's condition: *"I've got to walk my own family past the end of it."*
+- **ch_031 *Let Him Come* (Casian).** The night before. Gareth wants thirty men at the ford and loses twenty of them on paper; Edric refuses on arithmetic. **Casian's plan is a table**: gate open, fire lit, bread out, granary unlocked, the whole family in the yard, no weapon visible. His reasoning is read off the enemy's situation, not off his own power — Osric cannot afford a dead baron six weeks before Harven. Gareth gets the one order that makes him useful: *be visible, and look bored.* Nessa asks for the only promise that matters (*before, not after*) and gets it. Edric tells the drainage story and it is the whole volume in miniature. **Argius's warning, expanded:** he will not be dangerous to the county; he will be dangerous **to the idea that a thing can be settled anywhere else.**
+  - Irreversible: **the family is committed to standing in the open.** Casian's answer to Argius — *"Then I'd better be worth it"* — is the volume's thesis in six words.
+- **ch_032 *The Siege That Wasn't* (Tolan).** Two hundred men come over the drove and the ford sells them supper; Hollis's wife chose to stay and charge two pennings a cup after being told it was hers to decide. At dawn, gates open, the Baron of Vale at a table, one free man with a weapon on the wall and he looks bored. **Tolan works out the whole design in four minutes and cannot stop it:** burn it, take the baron, stand in the road, or eat — and eating is the only move that doesn't lose. A levy man is flogged in the yard and the yard watches it over bread. **Thirty-one men walk away before dark.** Tolan's verdict: *"The trap was never the trap."* Elna carries the water round all day and learns the column by its boots; Maren tells her to watch the flogging properly.
+  - **Ends on Casian standing at the gate for an hour not to watch the column but to be seen** — Tolan crosses the yard toward him. Hand-off to ch. 33.
+  - Deviations from the outline, deliberate: **ch. 26 is Elna's POV** (the outline had Hask), and **ch. 32 is Tolan's** with two family sections. Both were kept because the aura and the siege read better as testimony than as explanation.
+
+## Names locked this batch
+
+- **Vesna Orrow** (surname established ch. 11; do not change).
+- **Hollis Wray** — the family on the ford, not a barn survivor.
+- **Ansel Trask** is the Harrowmere fence (ch. 7/12) and stays in Harrowmere.
+- **Watt** (inn, Ashgrove), **Ivet** (Corin's wife), **Maeve Corran**, **Kael** (second rider).
+- **Tam Sillow**, **Ayleth**, **the Dunstans**, **the Coate sisters** — Hanging Rake families.
+- **Berrin**, **Skeat**, **Nib**, **Orm** — Hask's side. **Orm** the Ashgrove woodward (ch. 27) and **Cull Sillow** (ch. 29) are different men; the near-collision was fixed, do not reuse either name.
 
 ## Carry-out checklist
 
