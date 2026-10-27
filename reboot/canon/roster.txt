@@ -1,0 +1,64 @@
+# Canonical names — Master Roster
+# GENERATED from canon/characters.json by tools/age_ledger.py. Do not edit by hand.
+# Ages shown are as of volume_01 (1217). See canon/ages.md for every volume.
+# Any name in chapter frontmatter `characters:` must appear here, spelled exactly.
+
+# — The Vale household —
+Emric    # born 1216, age 1 · Aldric's son. An infant in Vol 1. Ages fastest of anyone — check the table every volume.
+Elna     # born 1205, age 12 · sister. His soft spot. Not a hostage. Never a hostage.
+Casian   # born 1201, age 16 · protagonist, fourth son. Unmatched Current-user. The easy brother by choice.
+Brennan  # born 1199, age 18 · third brother. The charm.
+Gareth   # born 1196, age 21 · second brother. The sword.
+Rowan    # born 1194, age 23 · Aldric's wife
+Aldric   # born 1193, age 24 · eldest brother, heir. Married to Rowan. Steady.
+Maren    # born 1172, age 45 · mother. Knows something is different and has decided not to make it a thing.
+Edric    # born 1168, age 49 · father, Baron of Vale. Good lord, good father, sees an ordinary son.
+Oswin    # born 1146, age 71 · paternal grandmother. Sharp, old, suspects plenty, says little.
+
+# — Argius —
+Argius  # ageless · damaged interface fragment. Not born. Ageless. The only one who remembers.
+
+# — The Hollow — built by Casian, not inherited —
+Vesna   # born 1198, age 19 · uplander, 19 in Vol 1; field partner. Becomes formidable because she works. The counter-evidence to dependency. NOT a romance lane.
+Kael    # born 1195, age 22 · upland scout lieutenant
+Calla   # born 1187, age 30 · Baroness of Fenwick, widow. Competent. Watching the Vale barony change.
+Corin   # born 1182, age 35 · Vale armsman turned field-master. Runs the unglamorous operations.
+Jory    # born 1179, age 38 · Vale guard captain. Loyal to the baron, slowly to something else.
+Maeve   # born 1177, age 40 · the miller's widow; intelligence. Reads ledgers better than anyone alive.
+Aldous  # born 1167, age 50 · surgeon-apothecary at Vale. The first man Casian cannot save fast enough.
+Ansel   # born 1157, age 60 · the fence at Harrowmere. Knows every debt on the eastern road.
+
+# — Romance —
+Seraine  # born 1198, age 19 · Lady Seraine Varyn. THE romance lane. The legitimate answer: make the east safe by law, not by Casian. Must never be reduced to a love interest — her own assessment is often correct.
+
+# — Unaffiliated —
+Sabeth  # born 1191, age 26 · outsider with her own project. THE question: asks him plainly whether he wants to be unnecessary, and does not accept charm. NOT a romance lane. Never softens into an ally who was on his side all along.
+
+# — Volume 1 — antagonists —
+Hask Veyr  # born 1173, age 44 · warlord of the eastern hills — dies 1217. Cruel, patient, genuinely dangerous.
+Osric      # born 1162, age 55 · Baron of Thornwall — dies 1217. Funds Hask quietly. Mistakes sentiment for weakness.
+
+# — The Ash — volume 2 —
+Ferrand  # born 1179, age 38 · Ash captain, field commander — dies 1218. Cruel. Does not survive the year.
+Vaunt    # born 1170, age 47 · Inquisitor of the eastern writ. Competent, and learns too much. Lives.
+Selwyn   # born 1165, age 52 · Warden of the Ashen Word, eastern circuit. Bureaucrat, believer, not a monster. Survives the series and is never converted.
+Lennah   # born 1157, age 60 · hedge-healer of Ashgrove — dies 1218. Burned. The reason Casian can never speak. Do not reuse the name.
+
+# — Volume 3 —
+Tace    # born 1205, age 12 · 14 in Vol 3; one of Ilse's people. The reason her project looks the way it does.
+Ilse    # born 1185, age 32 · forced the Current; dying of it — dies 1220. The mirror. Wants what Casian wants. Two years left at first meeting.
+Halden  # born 1177, age 40 · Ilse's lieutenant. Loyal, unsentimental. Survives her.
+
+# — The Court — volume 4 —
+Lucan  # born 1191, age 26 · Duke of Redmere. Elegant, competitive. Thinks every house has a price. Not erased. Lives.
+
+# — The Crown — volume 4 —
+Orlan    # born 1171, age 46 · Royal Marshal. Blunt soldier. Thinks the eastern Compact must be measured.
+Caedmon  # born 1163, age 54 · Royal Chancellor. Observant, dry, loyal to the Crown rather than any faction.
+
+# — Volume 5 (placeholders — confirm before planning) —
+Severin  # born 1188, age 29 · the betrayer. Placeholder — confirm before volume 5 planning.
+Ivara    # born 1180, age 37 · foreign power. Placeholder.
+Tarek    # born 1175, age 42 · coalition commander. Placeholder.
+
+# Names appearing in more than one group, or in no group, are an error.
