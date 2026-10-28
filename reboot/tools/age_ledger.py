@@ -124,7 +124,8 @@ def gen_ages(data):
                     cells.append("\u2020")
                 else:
                     cells.append(str(age_in(c["birth"], y)))
-            out.append(f"| {c['name']} | {c['birth'] if c['birth'] else '\u2014'} | " + " | ".join(cells) + " |")
+            birth_str = str(c["birth"]) if c["birth"] else "—"
+            out.append(f"| {c['name']} | {birth_str} | " + " | ".join(cells) + " |")
 
     out += [
         "",
